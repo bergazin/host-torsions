@@ -1,0 +1,5 @@
+notes:
+
+11/10/21
+following command will run bespoke on all fragments in fragments.csv file
+python run_all.py -fragments_csv_file host-systems/fragments.csv
