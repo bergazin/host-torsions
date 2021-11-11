@@ -240,3 +240,58 @@
 [2021-11-10 15:32:19,059: WARNING/ForkPoolWorker-1] 
 
 [2021-11-10 15:33:12,969: INFO/ForkPoolWorker-1] Task openff.bespokefit.executor.services.optimizer.worker.optimize[fd50aeff-0c8d-4103-a742-efe736899537] succeeded in 54.136309119s: '{"type": "bespoke", "input_schema": {"type": "bespoke", "id": "fd50aeff-0c8d-4103-a742-efe736899537", "initial_force_field": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<SMIRNOFF version=\"0.3\" aromaticity_model=\"OEAroModel_MDL\">\n    <Author>The Open Force Field Initiative</Author>\n    <Date>2020-10-21</Date>\n    <Bonds version=\"0.3\" potential=\"harmonic\" fractional_bondorder_method=\"AM1-Wiberg\" fractional_bondorder_interpolation=\"linear\">\n        <Bond smirks=\"[#6X4:1]-[#6X4:2]\" id=\"b1\" length=\"1.520980132854 * angstrom\" k=\"517.2187207483 * angstrom**-2 * mole**-1 * kilocalorie\"></Bond>\n        <Bond smirks=\"[#6X4:1]-[#6X3:2]\" id=\"b2\" length=\"1.501037244555 * angstrom\" k=\"601.2284108955 * angstrom**-2 * mole**-1 * kilocalorie\"></Bond>\n        <Bond smirks=\"[#6X4:1]-[#6X3:2]=[#8X1+0]\" id=\"b3\" length=\"1.521644911471 * angstrom\" k=\"663.5796689652 * angstrom**-2 * mole**-1 * kilocalorie\"></Bond>\n        <Bond smirks=\"[#6X3:1]-[#6X3:2]\" id=\"b4\"...'
+[2021-11-10 16:59:50,598: INFO/Process-2] Connected to redis://localhost:6379/0
+[2021-11-10 16:59:50,623: INFO/Process-2] mingle: searching for neighbors
+[2021-11-10 16:59:51,662: INFO/Process-2] mingle: all alone
+[2021-11-10 16:59:51,695: INFO/Process-2] celery@optimizer ready.
+[2021-11-10 17:00:25,903: INFO/Process-2] Task openff.bespokefit.executor.services.optimizer.worker.optimize[660d8f1c-bfde-4d77-87a5-f80e6737036d] received
+[2021-11-10 17:00:26,401: INFO/ForkPoolWorker-1] making new fb folders in 660d8f1c-bfde-4d77-87a5-f80e6737036d
+[2021-11-10 17:00:26,466: WARNING/ForkPoolWorker-1]   0%|          | 0/7 [00:00<?, ?it/s]
+[2021-11-10 17:00:26,467: WARNING/ForkPoolWorker-1]                                      
+[2021-11-10 17:00:26,467: WARNING/ForkPoolWorker-1] 
+[2021-11-10 17:00:26,468: WARNING/ForkPoolWorker-1] generating target directory for torsion-0
+[2021-11-10 17:00:26,468: WARNING/ForkPoolWorker-1] 
+
+[2021-11-10 17:00:26,469: WARNING/ForkPoolWorker-1]   0%|          | 0/7 [00:00<?, ?it/s]
+[2021-11-10 17:00:26,853: WARNING/ForkPoolWorker-1] Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+[2021-11-10 17:00:26,884: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:02,  2.40it/s]
+[2021-11-10 17:00:26,885: WARNING/ForkPoolWorker-1]                                              
+[2021-11-10 17:00:26,886: WARNING/ForkPoolWorker-1] 
+[2021-11-10 17:00:26,886: WARNING/ForkPoolWorker-1] generating target directory for torsion-1
+[2021-11-10 17:00:26,887: WARNING/ForkPoolWorker-1] 
+
+[2021-11-10 17:00:26,888: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:02,  2.40it/s]
+[2021-11-10 17:00:26,900: WARNING/ForkPoolWorker-1]                                              
+[2021-11-10 17:00:26,901: WARNING/ForkPoolWorker-1] 
+[2021-11-10 17:00:26,902: WARNING/ForkPoolWorker-1] generating target directory for torsion-2
+[2021-11-10 17:00:26,903: WARNING/ForkPoolWorker-1] 
+
+[2021-11-10 17:00:26,904: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:02,  2.40it/s]
+[2021-11-10 17:00:26,925: WARNING/ForkPoolWorker-1]                                              
+[2021-11-10 17:00:26,925: WARNING/ForkPoolWorker-1] 
+[2021-11-10 17:00:26,926: WARNING/ForkPoolWorker-1] generating target directory for torsion-3
+[2021-11-10 17:00:26,927: WARNING/ForkPoolWorker-1] 
+
+[2021-11-10 17:00:26,929: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:02,  2.40it/s]
+[2021-11-10 17:00:26,942: WARNING/ForkPoolWorker-1]                                              
+[2021-11-10 17:00:26,942: WARNING/ForkPoolWorker-1] 
+[2021-11-10 17:00:26,943: WARNING/ForkPoolWorker-1] generating target directory for torsion-4
+[2021-11-10 17:00:26,943: WARNING/ForkPoolWorker-1] 
+
+[2021-11-10 17:00:26,944: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:02,  2.40it/s]
+[2021-11-10 17:00:26,955: WARNING/ForkPoolWorker-1]                                              
+[2021-11-10 17:00:26,955: WARNING/ForkPoolWorker-1] 
+[2021-11-10 17:00:26,956: WARNING/ForkPoolWorker-1] generating target directory for torsion-5
+[2021-11-10 17:00:26,956: WARNING/ForkPoolWorker-1] 
+
+[2021-11-10 17:00:26,957: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:02,  2.40it/s]
+[2021-11-10 17:00:26,970: WARNING/ForkPoolWorker-1]                                              
+[2021-11-10 17:00:26,971: WARNING/ForkPoolWorker-1] 
+[2021-11-10 17:00:26,971: WARNING/ForkPoolWorker-1] generating target directory for torsion-6
+[2021-11-10 17:00:26,972: WARNING/ForkPoolWorker-1] 
+
+[2021-11-10 17:00:26,973: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:02,  2.40it/s]
+[2021-11-10 17:00:26,986: WARNING/ForkPoolWorker-1] 100%|##########| 7/7 [00:00<00:00, 17.02it/s]
+[2021-11-10 17:00:26,988: WARNING/ForkPoolWorker-1] 100%|##########| 7/7 [00:00<00:00, 13.46it/s]
+[2021-11-10 17:00:26,988: WARNING/ForkPoolWorker-1] 
+

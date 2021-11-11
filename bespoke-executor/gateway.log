@@ -64,3 +64,8 @@
 [task id=b'coordinator:optimization:9'] optimization transitioned from waiting -> running
 [task id=b'coordinator:optimization:9'] optimization transitioned from running -> success
 [task id=b'coordinator:optimization:9'] transitioned from running -> success
+[task id=b'coordinator:optimization:10'] transitioned from waiting -> running
+[task id=b'coordinator:optimization:10'] fragmentation transitioned from waiting -> running
+[task id=b'coordinator:optimization:10'] fragmentation transitioned from running -> success
+[task id=b'coordinator:optimization:10'] qc-generation transitioned from waiting -> success
+[task id=b'coordinator:optimization:10'] optimization transitioned from waiting -> running

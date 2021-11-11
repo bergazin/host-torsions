@@ -53,3 +53,7 @@
 [2021-11-10 15:31:50,406: INFO/Process-3] mingle: searching for neighbors
 [2021-11-10 15:31:51,436: INFO/Process-3] mingle: all alone
 [2021-11-10 15:31:51,465: INFO/Process-3] celery@qcgenerator ready.
+[2021-11-10 16:59:50,624: INFO/Process-3] Connected to redis://localhost:6379/0
+[2021-11-10 16:59:50,641: INFO/Process-3] mingle: searching for neighbors
+[2021-11-10 16:59:51,675: INFO/Process-3] mingle: all alone
+[2021-11-10 16:59:51,707: INFO/Process-3] celery@qcgenerator ready.
