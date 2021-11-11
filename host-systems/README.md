@@ -1,10 +1,6 @@
 # What's here
 
-<img src="./images/OA-fragment-1.png" width=25% height=25%>
-Fragment 1.
-
-<img src="./images/OA-fragment-2.png" width=25% height=25%>
-Fragment 2.
+<img src="./images/OA-fragment-1.png" width=25% height=25%> Fragment 1. <img src="./images/OA-fragment-2.png" width=25% height=25%> Fragment 2.
 
 <img src="./images/OA-fragment-3.png" width=25% height=25%>
 Fragment 3.
