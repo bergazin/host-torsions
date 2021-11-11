@@ -1,11 +1,6 @@
 # What's here
 
-<div style="width: 25%; height: 26%">
-
-  ![plot](./OA-fragment-1.png)
-
-</div>
-
+<img src="./OA-fragment-1.png" width=50% height=50%>
 
 
 
