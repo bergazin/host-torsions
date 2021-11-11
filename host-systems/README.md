@@ -1,6 +1,6 @@
 # What's here
 
-![plot](./SAMPL7_hosts.cdx)
+![plot](./OA-fragment-1.pdf)
 
 
 
