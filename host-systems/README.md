@@ -1,6 +1,11 @@
 # What's here
 
-![plot](./OA-fragment-1.png)
+<div style="width: 25%; height: 26%">
+
+  ![plot](./OA-fragment-1.png)
+
+</div>
+
 
 
 
