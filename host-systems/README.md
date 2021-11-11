@@ -1,6 +1,6 @@
 # What's here
 
-![plot](./OA-fragment-1.pdf)
+![plot](./OA-fragment-1.png)
 
 
 
