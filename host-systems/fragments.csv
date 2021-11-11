@@ -1,6 +1,6 @@
 fragment_id,smiles_from_chemdraw
 BrCO,BrCO
-OA-fragment-1,CC(C(C)=C1)=CC2=C1[C@]([H])(CCC([O-])=O)C3=C(C=C(C)C(C)=C3)O[C@]([H])(C4=CC(OC5=CC(C([O-])=O)=CC(OC)=C5)=CC(OC)=C4)O2
-OA-fragment-2,CC(C(C)=C1)=CC2=C1C([H])(CCC(O)=O)C3=C(C=C(C)C(C)=C3)OC([H])(C4=CC(OC)=CC(OC)=C4)O2
-OA-fragment-3,CC(C(C)=C1)=CC2=C1C([H])(CCC(O)=O)C3=C(C=C(C)C(C)=C3)OC([H])(C)O2
 OA-fragment-4,CC1=CC(OC2=CC(C(O)=O)=CC(OC)=C2)=CC(OC)=C1
+OA-fragment-3,CC(C(C)=C1)=CC2=C1C([H])(CCC(O)=O)C3=C(C=C(C)C(C)=C3)OC([H])(C)O2
+OA-fragment-2,CC(C(C)=C1)=CC2=C1C([H])(CCC(O)=O)C3=C(C=C(C)C(C)=C3)OC([H])(C4=CC(OC)=CC(OC)=C4)O2
+OA-fragment-1,CC(C(C)=C1)=CC2=C1[C@]([H])(CCC([O-])=O)C3=C(C=C(C)C(C)=C3)O[C@]([H])(C4=CC(OC5=CC(C([O-])=O)=CC(OC)=C5)=CC(OC)=C4)O2

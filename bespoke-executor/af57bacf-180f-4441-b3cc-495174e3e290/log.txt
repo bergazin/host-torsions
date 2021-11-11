@@ -1,488 +1,0 @@
-Output will be written to optimize.out
-#=====================================#
-#|     For black and white mode,     |#
-#|      Run this script with -b      |#
-#=====================================#
-#======================================================================#
-#| [1m            Welcome to ForceBalance version 1.9.2! =D             [0m |#
-#| [1m                 Force Field Optimization System                  [0m |#
-#| [1m                                                                  [0m |#
-#| [1m                             Authors:                             [0m |#
-#| [1m                          Lee-Ping Wang                           [0m |#
-#| [1m                  Yudong Qiu, Keri A. McKiernan                   [0m |#
-#| [1m          Jeffrey R. Wagner, Hyesu Jang, Simon Boothroyd          [0m |#
-#| [1m          Arthur Vigil, Erik G. Brandt, John Stoppelman           [0m |#
-#| [1m                  Johnny Israeli, Matt Thompson                   [0m |#
-#======================================================================#
-
-                          [44m     [0m                                        
-                       [44m        [0m      [43m     [0m                              
-                    [44m        [0m   [44m  [0m    [43m         [0m                          
-                 [44m       [0m    [44m      [0m      [43m         [0m                       
-             [44m        [0m    [44m        [0m          [43m         [0m                    
-          [44m        [0m    [44m        [0m                 [43m        [0m                 
-       [44m        [0m    [44m       [0m                        [43m        [0m              
-    [44m        [0m   [44m        [0m                              [43m         [0m          
-   [44m      [0m   [44m        [0m               `.:+@@###@'          [43m         [0m       
-    [44m [0m    [44m        [0m          ,;'+###############.             [43m     [0m       
-      [44m        [0m         +################':`                    [43m [0m        
-      [44m     [0m              `.,,...####+.                                  
-                                ,#####      +##.               [44m   [0m   [44m   [0m
- [43m    [0m                            #####      ######             [44m   [0m   [44m   [0m
- [43m    [0m                ###'        ####'     :#####'             [44m   [0m   [44m   [0m
- [43m    [0m                :####@      ####.    ,####'               [44m   [0m   [44m   [0m
- [43m    [0m                 ######     ####    +###+                 [44m   [0m   [44m   [0m
- [43m    [0m                  #####     ####   ###;                   [44m   [0m   [44m   [0m
- [43m    [0m                   :##      ####  ++`                     [44m   [0m   [44m   [0m
- [43m    [0m                            ####``..:;+##############+`   [44m   [0m   [44m   [0m
- [43m    [0m             .,:;;'++##################################`  [44m   [0m   [44m   [0m
- [43m    [0m    `############################++++''';;;;;;;;;;;'';    [44m   [0m   [44m   [0m
- [43m    [0m      ,########':,.``       ####                          [44m   [0m   [44m   [0m
- [43m    [0m                            ####                          [44m   [0m   [44m   [0m
- [43m    [0m                            ####                          [44m   [0m   [44m   [0m
- [43m    [0m                            ####                          [44m   [0m   [44m   [0m
- [43m    [0m                            ####                          [44m   [0m   [44m   [0m
- [43m    [0m                            ####                          [44m   [0m   [44m   [0m
- [43m    [0m                            ####                          [44m   [0m   [44m   [0m
- [43m    [0m                            ####                          [44m   [0m   [44m   [0m
-      [44m    [0m                       ####                                   
-     [44m        [0m                    ####                                   
-    [44m [0m    [44m       [0m                 ####                       [43m     [0m       
-   [44m     [0m    [44m        [0m             ####                    [43m        [0m       
-   [44m        [0m    [44m        [0m          ###                  [43m         [0m         
-      [44m        [0m    [44m        [0m        +`               [43m        [0m             
-          [44m        [0m   [44m        [0m                   [43m        [0m                
-             [44m        [0m   [44m         [0m           [43m         [0m                   
-                [44m        [0m    [44m       [0m      [43m         [0m                      
-                   [44m        [0m    [44m   [0m    [43m        [0m                          
-                      [44m        [0m       [43m      [0m                             
-                          [44m      [0m      [43m  [0m                                
-                             [44m  [0m                                         
-
-Reading options from file: optimize.in
-#========================================================#
-#| [95m  Options at their default values are not printed   [0m |#
-#| [95m        Use 'verbose_options True' to Enable        [0m |#
-#========================================================#
-Reading force field from file: force-field.offxml
-#=========================================================#
-#| [92m Starting parameter indices, physical values and IDs [0m |#
-#=========================================================#
-   0 [  0.0000e+00 ] : ProperTorsions/Proper/k2/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   1 [  0.0000e+00 ] : ProperTorsions/Proper/k4/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   2 [  6.9859e-01 ] : ProperTorsions/Proper/k3/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   3 [  0.0000e+00 ] : ProperTorsions/Proper/k1/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   4 [  0.0000e+00 ] : ProperTorsions/Proper/k2/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   5 [  0.0000e+00 ] : ProperTorsions/Proper/k4/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   6 [  6.9859e-01 ] : ProperTorsions/Proper/k3/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   7 [  0.0000e+00 ] : ProperTorsions/Proper/k1/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
------------------------------------------------------------
-#=========================================================#
-#| [91m Rescaling Factors by Type (Lower Takes Precedence): [0m |#
-#=========================================================#
-   ProperTorsions/Proper/k2             : 1.00000e+00
-   ProperTorsions/Proper/k4             : 1.00000e+00
-   ProperTorsions/Proper/k3             : 6.98594e-01
-   ProperTorsions/Proper/k1             : 1.00000e+00
-   ProperTorsions/Proper/k              : 6.00000e+00
------------------------------------------------------------
-#========================================================#
-#| [91m   Rescaling Types / Factors by Parameter Number:   [0m |#
-#========================================================#
-   0 [    ProperTorsions/Proper/k       : 6.00000e+00 ] : ProperTorsions/Proper/k2/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   1 [    ProperTorsions/Proper/k       : 6.00000e+00 ] : ProperTorsions/Proper/k4/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   2 [    ProperTorsions/Proper/k       : 6.00000e+00 ] : ProperTorsions/Proper/k3/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   3 [    ProperTorsions/Proper/k       : 6.00000e+00 ] : ProperTorsions/Proper/k1/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   4 [    ProperTorsions/Proper/k       : 6.00000e+00 ] : ProperTorsions/Proper/k2/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   5 [    ProperTorsions/Proper/k       : 6.00000e+00 ] : ProperTorsions/Proper/k4/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   6 [    ProperTorsions/Proper/k       : 6.00000e+00 ] : ProperTorsions/Proper/k3/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   7 [    ProperTorsions/Proper/k       : 6.00000e+00 ] : ProperTorsions/Proper/k1/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-----------------------------------------------------------
-#========================================================#
-#| [92m               Setup for force field                [0m |#
-#========================================================#
-fnms                      ['force-field.offxml'] 
-priors                    OrderedDict([('ProperTorsions/Proper/k', 6.0)]) 
-----------------------------------------------------------
-Referencing all energies to the snapshot 15 (minimum energy structure in QM)
-#========================================================#
-#| [92m            Setup for target torsion-0 :            [0m |#
-#========================================================#
-mol2                      ['input.sdf'] 
-precision                 double 
-platname                  Reference 
-name                      torsion-0 
-type                      TORSIONPROFILE_SMIRNOFF 
-h                         0.01 
-tgtdir                    targets/torsion-0 
-writelevel                2 
-attenuate                 True 
-energy_upper              10.0 
-----------------------------------------------------------
-#========================================================#
-#| [92m        SMIRNOFF Parameter Coverage Analysis        [0m |#
-#========================================================#
-Force field assignment data written to /Users/daniellebergaziin/host-torsions/bespoke-executor/af57bacf-180f-4441-b3cc-495174e3e290/smirnoff_parameter_assignments.json
- idx Parameter                                                                                                   Count
-----------------------------------------------------------------------------------------------------------------------
-   0 ProperTorsions/Proper/k2/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4] :          1
-   1 ProperTorsions/Proper/k4/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4] :          1
-   2 ProperTorsions/Proper/k3/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4] :          1
-   3 ProperTorsions/Proper/k1/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4] :          1
-   4 ProperTorsions/Proper/k2/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4] :          2
-   5 ProperTorsions/Proper/k4/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4] :          2
-   6 ProperTorsions/Proper/k3/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4] :          2
-   7 ProperTorsions/Proper/k1/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4] :          2
-SNIRNOFF Parameter Coverage Analysis result: 8/8 parameters are covered.
-----------------------------------------------------------------------------------------------------------------------
-L1 norm uses the hyperbolic penalty, make sure penalty_hyperbolic_b is set sufficiently small
-#========================================================#
-#| [92m           Setup for objective function :           [0m |#
-#========================================================#
-penalty_type              L1 
-penalty_additive          1.0 
-normalize_weights         False 
-----------------------------------------------------------
-#========================================================#
-#| [92m                Setup for optimizer                 [0m |#
-#========================================================#
-jobtype                   OPTIMIZE 
-trust0                    -0.25 
-mintrust                  0.05 
-eps                       0.01 
-h                         0.01 
-h0                        0.01 
-convergence_objective     0.01 
-convergence_step          0.01 
-convergence_gradient      0.01 
-maxstep                   10 
-adapt_fac                 0.2 
-adapt_damp                1.0 
-err_tol                   1.0 
-input_file                optimize.in 
-criteria                  2 
-----------------------------------------------------------
-Calculation started at 2021-11-10 03:02 PM
-#========================================================#
-#| [1m                  Main Optimizer                    [0m |#
-#| [1m  Newton-Raphson Method (Hessian Diagonal Search)   [0m |#
-#| [1m                                                    [0m |#
-#| [1m       [0mConvergence criteria (2 of 3 needed):        [0m |#
-#| [1m          [0mObjective Function  : 1.000e-02           [0m |#
-#| [1m          [0mNorm of Gradient    : 1.000e-02           [0m |#
-#| [1m          [0mParameter step size : 1.000e-02           [0m |#
-#========================================================#
-#========================================================#
-#|       Color Key for Objective Function -=X2=-        |#
-#|  [1mBold[0m = Initial step                                 |#
-#|  [92mGreen = Current lowest value of objective function[0m  |#
-#|  [91mRed = Objective function rises, step rejected[0m       |#
-#|  [0mNo color = Not at the lowest value                  |#
-#========================================================#
-#========================================================#
-#| [94m     Iteration 0: Evaluating objective function     [0m |#
-#| [94m        and derivatives through second order        [0m |#
-#========================================================#
-fdwrap: compute [0] = -1.0e-02                                                   fdwrap: compute [0] =  1.0e-02                                                   fdwrap: compute [1] = -1.0e-02                                                   fdwrap: compute [1] =  1.0e-02                                                   fdwrap: compute [2] = -1.0e-02                                                   fdwrap: compute [2] =  1.0e-02                                                   fdwrap: compute [3] = -1.0e-02                                                   fdwrap: compute [3] =  1.0e-02                                                   fdwrap: compute [4] = -1.0e-02                                                   fdwrap: compute [4] =  1.0e-02                                                   fdwrap: compute [5] = -1.0e-02                                                   fdwrap: compute [5] =  1.0e-02                                                   fdwrap: compute [6] = -1.0e-02                                                   fdwrap: compute [6] =  1.0e-02                                                   fdwrap: compute [7] = -1.0e-02                                                   fdwrap: compute [7] =  1.0e-02                                                   
-#==================================================================================================================================================#
-#| [92m                               Torsion Profile: torsion-0, Objective =  2.77059e+00, Units = kcal/mol, Angstrom                               [0m |#
-#| [92m System                                             Min(QM)    Min(MM)      Range(QM)          Range(MM)    Max-RMSD   Ene-RMSE    Obj-Fn     [0m |#
-#==================================================================================================================================================#
-torsion-0                                                  60         45     0.000 - 5.237    -0.134 - 5.364      0.040     1.6645    2.7706 
-----------------------------------------------------------------------------------------------------------------------------------------------------
-#====================================================================#
-#| [94m                  Objective Function Breakdown                  [0m |#
-#| [94m  Target Name              Residual  x  Weight  =  Contribution [0m |#
-#====================================================================#
-torsion-0                      2.77059      1.000 [94m     2.77059e+00[0m 
-Regularization                 0.00000      1.000 [94m     0.00000e+00[0m 
-Total                                             [94m     2.77059e+00[0m 
-----------------------------------------------------------------------
-
-  Step       |k|        |dk|       |grad|       -=X2=-     Delta(X2)    StepQual
-     0   0.000e+00   0.000e+00   2.442e+01[1m   2.77059e+00[0m   0.000e+00      0.000
-
-#========================================================#
-#| [94m                   Total Gradient                   [0m |#
-#========================================================#
-   0 [  1.08862938e+01 ] : ProperTorsions/Proper/k2/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   1 [ -7.58940706e+00 ] : ProperTorsions/Proper/k4/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   2 [  6.88732717e+00 ] : ProperTorsions/Proper/k3/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   3 [ -3.49296483e+00 ] : ProperTorsions/Proper/k1/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   4 [ -1.03031732e+01 ] : ProperTorsions/Proper/k2/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   5 [  9.16652887e+00 ] : ProperTorsions/Proper/k4/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   6 [  1.26368847e+01 ] : ProperTorsions/Proper/k3/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   7 [  3.29943578e+00 ] : ProperTorsions/Proper/k1/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-----------------------------------------------------------
-Calculating nonlinear optimization step
-Hessian has a small or negative eigenvalue (5.2e-08), mixing in some steepest descent (1.0e-02) to correct this.
-Eigenvalues are:
- 5.2e-08  1.7e-02  9.8e-02  2.0e-01  3.8e+01  4.6e+01  9.6e+01  4.6e+02 
-0.028 s (L-BFGS 1) 0.041 s (L-BFGS 2) 0.039 s (L-BFGS 1) 0.042 s (L-BFGS 2) Finding trust radius: H+0.0000*I, length 3.2212e-01 (target 2.5000e-01)
-0.017 s (L-BFGS 1) 0.017 s (L-BFGS 2) Finding trust radius: H+9.0000*I, length 2.3147e-01 (target 2.5000e-01)
-0.012 s (L-BFGS 1) 0.008 s (L-BFGS 2) Finding trust radius: H+61.6869*I, length 1.2942e-01 (target 2.5000e-01)
-0.014 s (L-BFGS 1) 0.015 s (L-BFGS 2) Finding trust radius: H+9.0000*I, length 2.3147e-01 (target 2.5000e-01)
-0.008 s (L-BFGS 1) 0.006 s (L-BFGS 2) Finding trust radius: H+23.5623*I, length 1.8789e-01 (target 2.5000e-01)
-0.021 s (L-BFGS 1) 0.024 s (L-BFGS 2) Finding trust radius: H+3.4377*I, length 2.5413e-01 (target 2.5000e-01)
-0.018 s (L-BFGS 1) 0.018 s (L-BFGS 2) Finding trust radius: H+4.6743*I, length 2.4866e-01 (target 2.5000e-01)
-0.020 s (L-BFGS 1) 0.017 s (L-BFGS 2) Finding trust radius: H+4.2857*I, length 2.5036e-01 (target 2.5000e-01)
-0.018 s (L-BFGS 1) 0.018 s (L-BFGS 2) Finding trust radius: H+4.3562*I, length 2.5004e-01 (target 2.5000e-01)
-0.023 s (L-BFGS 1) 0.018 s (L-BFGS 2) Finding trust radius: H+4.3666*I, length 2.4999e-01 (target 2.5000e-01)
-0.013 s (L-BFGS 1) 0.016 s (L-BFGS 2) Finding trust radius: H+4.3645*I, length 2.5000e-01 (target 2.5000e-01)
-0.018 s (L-BFGS 1) 0.015 s (L-BFGS 2) Finding trust radius: H+4.3633*I, length 2.5001e-01 (target 2.5000e-01)
-0.013 s (L-BFGS 1) 0.013 s (L-BFGS 2) Starting Hessian diagonal search with step size 2.5000e-01
-0.014 s (L-BFGS 1) 0.014 s (L-BFGS 2) Hessian diagonal search: H+4.3645*I, length 2.5000e-01, result -2.2606e+00
-0.003 s (L-BFGS 1) 0.002 s (L-BFGS 2) Hessian diagonal search: H+128.9724*I, length 8.5583e-02, result -1.3134e+00
-0.002 s (L-BFGS 1) 0.002 s (L-BFGS 2) Hessian diagonal search: H+166.5622*I, length 7.2468e-02, result -1.1618e+00
-0.016 s (L-BFGS 1) 0.013 s (L-BFGS 2) Hessian diagonal search: H+4.3645*I, length 2.5000e-01, result -2.2606e+00
-0.008 s (L-BFGS 1) 0.008 s (L-BFGS 2) Hessian diagonal search: H+13.2383*I, length 2.1679e-01, result -2.1953e+00
-0.004 s (L-BFGS 1) 0.004 s (L-BFGS 2) Hessian diagonal search: H+31.6857*I, length 1.7082e-01, result -2.0061e+00
-0.010 s (L-BFGS 1) 0.010 s (L-BFGS 2) Hessian diagonal search: H+0.0196*I, length 2.7081e-01, result -2.2713e+00
-0.018 s (L-BFGS 1) 0.021 s (L-BFGS 2) Hessian diagonal search: H+0.2065*I, length 2.7316e-01, result -2.2720e+00
-0.012 s (L-BFGS 1) 0.011 s (L-BFGS 2) Hessian diagonal search: H+0.0971*I, length 2.7040e-01, result -2.2713e+00
-0.008 s (L-BFGS 1) 0.008 s (L-BFGS 2) Hessian diagonal search: H+1.1639*I, length 2.6492e-01, result -2.2706e+00
-0.008 s (L-BFGS 1) 0.008 s (L-BFGS 2) Hessian diagonal search: H+0.4801*I, length 2.6840e-01, result -2.2712e+00
-0.011 s (L-BFGS 1) 0.012 s (L-BFGS 2) Hessian diagonal search: H+0.2976*I, length 2.6936e-01, result -2.2713e+00
-0.010 s (L-BFGS 1) 0.010 s (L-BFGS 2) Hessian diagonal search: H+0.1599*I, length 2.7007e-01, result -2.2713e+00
-0.012 s (L-BFGS 1) 0.012 s (L-BFGS 2) Hessian diagonal search: H+0.2393*I, length 2.6965e-01, result -2.2713e+00
-0.018 s (L-BFGS 1) 0.014 s (L-BFGS 2) Hessian diagonal search: H+0.1880*I, length 2.6993e-01, result -2.2713e+00
-0.016 s (L-BFGS 1) 0.018 s (L-BFGS 2) Hessian diagonal search: H+0.2188*I, length 2.7281e-01, result -2.2720e+00
-0.013 s (L-BFGS 1) 0.016 s (L-BFGS 2) Hessian diagonal search: H+0.2076*I, length 2.6983e-01, result -2.2713e+00
-0.026 s (L-BFGS 1) 0.023 s (L-BFGS 2) Hessian diagonal search: H+0.2064*I, length 2.7316e-01, result -2.2720e+00
-0.032 s (L-BFGS 1) 0.030 s (L-BFGS 2) Hessian diagonal search: H+0.1992*I, length 2.7338e-01, result -2.2720e+00
-0.016 s (L-BFGS 1) 0.018 s (L-BFGS 2) Hessian diagonal search: H+0.2003*I, length 2.7335e-01, result -2.2720e+00
-0.021 s (L-BFGS 1) 0.019 s (L-BFGS 2) Hessian diagonal search: H+0.1949*I, length 2.6989e-01, result -2.2713e+00
-0.025 s (L-BFGS 1) 0.028 s (L-BFGS 2) Hessian diagonal search: H+0.1976*I, length 2.7343e-01, result -2.2720e+00
-0.028 s (L-BFGS 1) 0.024 s (L-BFGS 2) Hessian diagonal search: H+0.1966*I, length 2.7347e-01, result -2.2720e+00
-0.030 s (L-BFGS 1) 0.029 s (L-BFGS 2) Hessian diagonal search: H+0.1959*I, length 2.7348e-01, result -2.2720e+00
-0.022 s (L-BFGS 1) 0.021 s (L-BFGS 2) Hessian diagonal search: H+0.1955*I, length 2.7350e-01, result -2.2720e+00
-0.023 s (L-BFGS 1) 0.025 s (L-BFGS 2) Hessian diagonal search: H+0.1953*I, length 2.7125e-01, result -2.2717e+00
-0.023 s (L-BFGS 1) 0.021 s (L-BFGS 2) Hessian diagonal search: H+0.1957*I, length 2.7349e-01, result -2.2720e+00
-0.034 s (L-BFGS 1) 0.034 s (L-BFGS 2) Optimization step found (length 2.7349e-01)
-#========================================================#
-#| [95m  Mathematical Parameters (Current + Step = Next)   [0m |#
-#========================================================#
-   0 [  0.0000e+00 - 2.1797e-01 = -2.1797e-01 ] : ProperTorsions/Proper/k2/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   1 [  0.0000e+00 + 2.2465e-06 =  2.2465e-06 ] : ProperTorsions/Proper/k4/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   2 [  0.0000e+00 - 6.9569e-07 = -6.9569e-07 ] : ProperTorsions/Proper/k3/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   3 [  0.0000e+00 - 5.2675e-07 = -5.2675e-07 ] : ProperTorsions/Proper/k1/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   4 [  0.0000e+00 + 1.4450e-01 =  1.4450e-01 ] : ProperTorsions/Proper/k2/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   5 [  0.0000e+00 - 1.3543e-02 = -1.3543e-02 ] : ProperTorsions/Proper/k4/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   6 [  0.0000e+00 - 7.8881e-02 = -7.8881e-02 ] : ProperTorsions/Proper/k3/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   7 [  0.0000e+00 + 5.6567e-07 =  5.6567e-07 ] : ProperTorsions/Proper/k1/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-----------------------------------------------------------
-#========================================================#
-#| [95m    Physical Parameters (Current + Step = Next)     [0m |#
-#========================================================#
-   0 [  0.0000e+00 - 1.3078e+00 = -1.3078e+00 ] : ProperTorsions/Proper/k2/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   1 [  0.0000e+00 + 1.3479e-05 =  1.3479e-05 ] : ProperTorsions/Proper/k4/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   2 [  6.9859e-01 - 4.1742e-06 =  6.9859e-01 ] : ProperTorsions/Proper/k3/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   3 [  0.0000e+00 - 3.1605e-06 = -3.1605e-06 ] : ProperTorsions/Proper/k1/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   4 [  0.0000e+00 + 8.6701e-01 =  8.6701e-01 ] : ProperTorsions/Proper/k2/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   5 [  0.0000e+00 - 8.1255e-02 = -8.1255e-02 ] : ProperTorsions/Proper/k4/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   6 [  6.9859e-01 - 4.7328e-01 =  2.2531e-01 ] : ProperTorsions/Proper/k3/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   7 [  0.0000e+00 + 3.3940e-06 =  3.3940e-06 ] : ProperTorsions/Proper/k1/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-----------------------------------------------------------
-Input file with saved parameters: optimize.sav
-#========================================================#
-#| [94m     Iteration 1: Evaluating objective function     [0m |#
-#| [94m        and derivatives through second order        [0m |#
-#========================================================#
-fdwrap: compute [0] = -1.0e-02                                                   fdwrap: compute [0] =  1.0e-02                                                   fdwrap: compute [1] = -1.0e-02                                                   fdwrap: compute [1] =  1.0e-02                                                   fdwrap: compute [2] = -1.0e-02                                                   fdwrap: compute [2] =  1.0e-02                                                   fdwrap: compute [3] = -1.0e-02                                                   fdwrap: compute [3] =  1.0e-02                                                   fdwrap: compute [4] = -1.0e-02                                                   fdwrap: compute [4] =  1.0e-02                                                   fdwrap: compute [5] = -1.0e-02                                                   fdwrap: compute [5] =  1.0e-02                                                   fdwrap: compute [6] = -1.0e-02                                                   fdwrap: compute [6] =  1.0e-02                                                   fdwrap: compute [7] = -1.0e-02                                                   fdwrap: compute [7] =  1.0e-02                                                   
-#==================================================================================================================================================#
-#| [92m                               Torsion Profile: torsion-0, Objective =  4.36727e-02, Units = kcal/mol, Angstrom                               [0m |#
-#| [92m System                                             Min(QM)    Min(MM)      Range(QM)          Range(MM)    Max-RMSD   Ene-RMSE    Obj-Fn     [0m |#
-#==================================================================================================================================================#
-torsion-0                                                  60        -60     0.000 - 5.237    -0.022 - 4.591      0.039     0.2090    0.0437 
-----------------------------------------------------------------------------------------------------------------------------------------------------
-#===================================================================================#
-#| [94m                         Objective Function Breakdown                          [0m |#
-#| [94m  Target Name              Residual  x  Weight  =  Contribution (Current-Prev) [0m |#
-#===================================================================================#
-torsion-0                      0.04367      1.000 [92m     4.36727e-02[0m ( -2.727e+00 ) 
-Regularization                 0.45489      1.000 [91m     4.54893e-01[0m ( +4.549e-01 ) 
-Total                                             [92m     4.98566e-01[0m ( -2.272e+00 ) 
--------------------------------------------------------------------------------------
-Creating the directory /Users/daniellebergaziin/host-torsions/bespoke-executor/af57bacf-180f-4441-b3cc-495174e3e290/result/optimize to print the force field
-#========================================================================#
-#|  The force field has been written to the result/optimize directory.  |#
-#|    Input file with optimization parameters saved to optimize.sav.    |#
-#========================================================================#
-
-  Step       |k|        |dk|       |grad|       -=X2=-     Delta(X2)    StepQual
-     1   2.735e-01   2.735e-01   4.010e-01[92m   4.98566e-01[0m  -2.272e+00      1.000
-
-#========================================================#
-#| [94m                   Total Gradient                   [0m |#
-#========================================================#
-   0 [  3.58758986e-02 ] : ProperTorsions/Proper/k2/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   1 [  1.68698739e-01 ] : ProperTorsions/Proper/k4/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   2 [ -1.42976167e-01 ] : ProperTorsions/Proper/k3/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   3 [  1.12172645e-01 ] : ProperTorsions/Proper/k1/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   4 [ -1.10954852e-02 ] : ProperTorsions/Proper/k2/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   5 [ -1.80343543e-01 ] : ProperTorsions/Proper/k4/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   6 [ -2.31995309e-01 ] : ProperTorsions/Proper/k3/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   7 [ -1.07588979e-01 ] : ProperTorsions/Proper/k1/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-----------------------------------------------------------
-Calculating nonlinear optimization step
-Hessian has a small or negative eigenvalue (9.0e-08), mixing in some steepest descent (1.0e-02) to correct this.
-Eigenvalues are:
- 9.0e-08  9.5e-04  1.1e-02  1.7e-01  3.7e+01  4.7e+01  9.5e+01  4.8e+02 
-0.016 s (L-BFGS 1) 0.035 s (L-BFGS 2) Starting Hessian diagonal search with step size 1.9964e-01
-0.018 s (L-BFGS 1) 0.026 s (L-BFGS 2) Hessian diagonal search: H+0.0000*I, length 1.9964e-01, result -3.1486e-03
-0.010 s (L-BFGS 1) 0.009 s (L-BFGS 2) Hessian diagonal search: H+9.0000*I, length 2.9969e-03, result -2.7972e-04
-0.007 s (L-BFGS 1) 0.007 s (L-BFGS 2) Hessian diagonal search: H+23.5623*I, length 1.9988e-03, result -2.4511e-04
-0.015 s (L-BFGS 1) 0.026 s (L-BFGS 2) Hessian diagonal search: H+0.0000*I, length 1.9964e-01, result -3.1486e-03
-0.014 s (L-BFGS 1) 0.015 s (L-BFGS 2) Hessian diagonal search: H+3.4377*I, length 5.3037e-03, result -3.2679e-04
-0.025 s (L-BFGS 1) 0.048 s (L-BFGS 2) Hessian diagonal search: H+1.3131*I, length 1.2053e-02, result -4.3523e-04
-0.026 s (L-BFGS 1) 0.021 s (L-BFGS 2) Hessian diagonal search: H+0.1157*I, length 1.1208e-01, result -1.9059e-03
-0.024 s (L-BFGS 1) 0.024 s (L-BFGS 2) Hessian diagonal search: H+0.0788*I, length 1.5237e-01, result -2.4827e-03
-0.034 s (L-BFGS 1) 0.024 s (L-BFGS 2) Hessian diagonal search: H+0.0003*I, length 1.9964e-01, result -3.1486e-03
-0.047 s (L-BFGS 1) 0.021 s (L-BFGS 2) Hessian diagonal search: H+0.0001*I, length 1.9964e-01, result -3.1486e-03
-0.036 s (L-BFGS 1) 0.027 s (L-BFGS 2) Hessian diagonal search: H+0.0000*I, length 1.9964e-01, result -3.1486e-03
-0.043 s (L-BFGS 1) 0.032 s (L-BFGS 2) Hessian diagonal search: H+0.0002*I, length 1.9964e-01, result -3.1487e-03
-0.063 s (L-BFGS 1) 0.034 s (L-BFGS 2) Hessian diagonal search: H+0.0002*I, length 1.9964e-01, result -3.1487e-03
-0.039 s (L-BFGS 1) 0.056 s (L-BFGS 2) Hessian diagonal search: H+0.0002*I, length 1.9964e-01, result -3.1487e-03
-0.041 s (L-BFGS 1) 0.021 s (L-BFGS 2) Hessian diagonal search: H+0.0001*I, length 1.9964e-01, result -3.1488e-03
-0.035 s (L-BFGS 1) 0.030 s (L-BFGS 2) Hessian diagonal search: H+0.0001*I, length 1.9964e-01, result -3.1487e-03
-0.027 s (L-BFGS 1) 0.040 s (L-BFGS 2) Hessian diagonal search: H+0.0001*I, length 1.9964e-01, result -3.1487e-03
-0.044 s (L-BFGS 1) 0.045 s (L-BFGS 2) Hessian diagonal search: H+0.0001*I, length 1.9963e-01, result -3.1487e-03
-0.065 s (L-BFGS 1) 0.039 s (L-BFGS 2) Hessian diagonal search: H+0.0001*I, length 1.9964e-01, result -3.1487e-03
-0.044 s (L-BFGS 1) 0.028 s (L-BFGS 2) Optimization step found (length 1.9964e-01)
-#========================================================#
-#| [95m  Mathematical Parameters (Current + Step = Next)   [0m |#
-#========================================================#
-   0 [ -2.1797e-01 - 1.3765e-01 = -3.5562e-01 ] : ProperTorsions/Proper/k2/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   1 [  2.2465e-06 + 1.7835e-07 =  2.4248e-06 ] : ProperTorsions/Proper/k4/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   2 [ -6.9569e-07 + 3.6073e-08 = -6.5962e-07 ] : ProperTorsions/Proper/k3/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   3 [ -5.2675e-07 - 2.8541e-07 = -8.1217e-07 ] : ProperTorsions/Proper/k1/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   4 [  1.4450e-01 - 1.4450e-01 =  5.7738e-06 ] : ProperTorsions/Proper/k2/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   5 [ -1.3543e-02 + 4.6880e-03 = -8.8545e-03 ] : ProperTorsions/Proper/k4/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   6 [ -7.8881e-02 - 2.3085e-03 = -8.1189e-02 ] : ProperTorsions/Proper/k3/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   7 [  5.6567e-07 + 3.1816e-07 =  8.8383e-07 ] : ProperTorsions/Proper/k1/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-----------------------------------------------------------
-#========================================================#
-#| [95m    Physical Parameters (Current + Step = Next)     [0m |#
-#========================================================#
-   0 [ -1.3078e+00 - 8.2591e-01 = -2.1337e+00 ] : ProperTorsions/Proper/k2/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   1 [  1.3479e-05 + 1.0701e-06 =  1.4549e-05 ] : ProperTorsions/Proper/k4/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   2 [  6.9859e-01 + 2.1644e-07 =  6.9859e-01 ] : ProperTorsions/Proper/k3/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   3 [ -3.1605e-06 - 1.7125e-06 = -4.8730e-06 ] : ProperTorsions/Proper/k1/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   4 [  8.6701e-01 - 8.6697e-01 =  3.4643e-05 ] : ProperTorsions/Proper/k2/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   5 [ -8.1255e-02 + 2.8128e-02 = -5.3127e-02 ] : ProperTorsions/Proper/k4/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   6 [  2.2531e-01 - 1.3851e-02 =  2.1146e-01 ] : ProperTorsions/Proper/k3/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   7 [  3.3940e-06 + 1.9089e-06 =  5.3030e-06 ] : ProperTorsions/Proper/k1/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-----------------------------------------------------------
-Input file with saved parameters: optimize.sav
-#========================================================#
-#| [94m     Iteration 2: Evaluating objective function     [0m |#
-#| [94m        and derivatives through second order        [0m |#
-#========================================================#
-fdwrap: compute [0] = -1.0e-02                                                   fdwrap: compute [0] =  1.0e-02                                                   fdwrap: compute [1] = -1.0e-02                                                   fdwrap: compute [1] =  1.0e-02                                                   fdwrap: compute [2] = -1.0e-02                                                   fdwrap: compute [2] =  1.0e-02                                                   fdwrap: compute [3] = -1.0e-02                                                   fdwrap: compute [3] =  1.0e-02                                                   fdwrap: compute [4] = -1.0e-02                                                   fdwrap: compute [4] =  1.0e-02                                                   fdwrap: compute [5] = -1.0e-02                                                   fdwrap: compute [5] =  1.0e-02                                                   fdwrap: compute [6] = -1.0e-02                                                   fdwrap: compute [6] =  1.0e-02                                                   fdwrap: compute [7] = -1.0e-02                                                   fdwrap: compute [7] =  1.0e-02                                                   
-#==================================================================================================================================================#
-#| [92m                               Torsion Profile: torsion-0, Objective =  4.97466e-02, Units = kcal/mol, Angstrom                               [0m |#
-#| [92m System                                             Min(QM)    Min(MM)      Range(QM)          Range(MM)    Max-RMSD   Ene-RMSE    Obj-Fn     [0m |#
-#==================================================================================================================================================#
-torsion-0                                                  60        -60     0.000 - 5.237    -0.022 - 4.587      0.042     0.2230    0.0497 
-----------------------------------------------------------------------------------------------------------------------------------------------------
-#===================================================================================#
-#| [94m                         Objective Function Breakdown                          [0m |#
-#| [94m  Target Name              Residual  x  Weight  =  Contribution (Current-Prev) [0m |#
-#===================================================================================#
-torsion-0                      0.04975      1.000 [91m     4.97466e-02[0m ( +6.074e-03 ) 
-Regularization                 0.44567      1.000 [92m     4.45670e-01[0m ( -9.223e-03 ) 
-Total                                             [92m     4.95417e-01[0m ( -3.149e-03 ) 
--------------------------------------------------------------------------------------
-Backing up result/optimize/force-field.offxml -> result/optimize/force-field_1.offxml
-#========================================================================#
-#|  The force field has been written to the result/optimize directory.  |#
-#|    Input file with optimization parameters saved to optimize.sav.    |#
-#========================================================================#
-
-  Step       |k|        |dk|       |grad|       -=X2=-     Delta(X2)    StepQual
-     2   3.649e-01   1.996e-01   6.913e-02[92m   4.95417e-01[0m  -3.149e-03      1.000
-
-#========================================================#
-#| [94m                   Total Gradient                   [0m |#
-#========================================================#
-   0 [ -2.29049528e-03 ] : ProperTorsions/Proper/k2/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   1 [  9.01410117e-03 ] : ProperTorsions/Proper/k4/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   2 [  9.16865381e-03 ] : ProperTorsions/Proper/k3/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   3 [ -1.13944486e-03 ] : ProperTorsions/Proper/k1/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   4 [  6.62607874e-03 ] : ProperTorsions/Proper/k2/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   5 [  4.33774900e-02 ] : ProperTorsions/Proper/k4/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   6 [  4.91612886e-02 ] : ProperTorsions/Proper/k3/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   7 [  1.62666256e-02 ] : ProperTorsions/Proper/k1/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-----------------------------------------------------------
-Convergence criterion reached for objective function (1.00e-02)
-Calculating nonlinear optimization step
-Hessian has a small or negative eigenvalue (5.4e-08), mixing in some steepest descent (1.0e-02) to correct this.
-Eigenvalues are:
- 5.4e-08  9.2e-04  1.2e-02  2.3e-02  3.7e+01  4.8e+01  9.6e+01  4.8e+02 
-0.006 s (L-BFGS 1) 0.026 s (L-BFGS 2) Starting Hessian diagonal search with step size 6.7272e-04
-0.006 s (L-BFGS 1) 0.027 s (L-BFGS 2) Hessian diagonal search: H+0.0000*I, length 6.7272e-04, result -1.3201e-05
-0.007 s (L-BFGS 1) 0.011 s (L-BFGS 2) Hessian diagonal search: H+9.0000*I, length 5.4597e-04, result -1.2909e-05
-0.006 s (L-BFGS 1) 0.011 s (L-BFGS 2) Hessian diagonal search: H+23.5623*I, length 4.2138e-04, result -1.1973e-05
-0.007 s (L-BFGS 1) 0.030 s (L-BFGS 2) Hessian diagonal search: H+0.0000*I, length 6.7272e-04, result -1.3201e-05
-0.007 s (L-BFGS 1) 0.015 s (L-BFGS 2) Hessian diagonal search: H+3.4377*I, length 6.1702e-04, result -1.3144e-05
-0.007 s (L-BFGS 1) 0.022 s (L-BFGS 2) Hessian diagonal search: H+1.3131*I, length 6.4961e-04, result -1.3193e-05
-0.008 s (L-BFGS 1) 0.023 s (L-BFGS 2) Hessian diagonal search: H+0.0817*I, length 6.7210e-04, result -1.3200e-05
-0.007 s (L-BFGS 1) 0.026 s (L-BFGS 2) Hessian diagonal search: H+0.0882*I, length 6.7338e-04, result -1.3199e-05
-0.007 s (L-BFGS 1) 0.027 s (L-BFGS 2) Hessian diagonal search: H+0.0024*I, length 6.6951e-04, result -1.3201e-05
-0.007 s (L-BFGS 1) 0.013 s (L-BFGS 2) Hessian diagonal search: H+0.0012*I, length 6.2658e-04, result -1.2974e-05
-0.007 s (L-BFGS 1) 0.035 s (L-BFGS 2) Hessian diagonal search: H+0.0195*I, length 6.7472e-04, result -1.3201e-05
-0.006 s (L-BFGS 1) 0.027 s (L-BFGS 2) Hessian diagonal search: H+0.0382*I, length 6.7295e-04, result -1.3201e-05
-0.007 s (L-BFGS 1) 0.033 s (L-BFGS 2) Hessian diagonal search: H+0.0529*I, length 6.7232e-04, result -1.3200e-05
-0.007 s (L-BFGS 1) 0.033 s (L-BFGS 2) Hessian diagonal search: H+0.0303*I, length 6.7384e-04, result -1.3201e-05
-0.006 s (L-BFGS 1) 0.021 s (L-BFGS 2) Hessian diagonal search: H+0.0435*I, length 6.7096e-04, result -1.3135e-05
-0.009 s (L-BFGS 1) 0.023 s (L-BFGS 2) Hessian diagonal search: H+0.0351*I, length 7.3444e-04, result -1.3043e-05
-0.007 s (L-BFGS 1) 0.040 s (L-BFGS 2) Hessian diagonal search: H+0.0402*I, length 6.7464e-04, result -1.3195e-05
-0.007 s (L-BFGS 1) 0.034 s (L-BFGS 2) Hessian diagonal search: H+0.0370*I, length 6.7296e-04, result -1.3201e-05
-0.007 s (L-BFGS 1) 0.030 s (L-BFGS 2) Hessian diagonal search: H+0.0389*I, length 6.2292e-04, result -1.2954e-05
-0.010 s (L-BFGS 1) 0.026 s (L-BFGS 2) Hessian diagonal search: H+0.0377*I, length 6.2362e-04, result -1.2955e-05
-0.008 s (L-BFGS 1) 0.018 s (L-BFGS 2) Hessian diagonal search: H+0.0385*I, length 6.7151e-04, result -1.3194e-05
-0.007 s (L-BFGS 1) 0.028 s (L-BFGS 2) Hessian diagonal search: H+0.0380*I, length 6.7513e-04, result -1.3198e-05
-0.007 s (L-BFGS 1) 0.023 s (L-BFGS 2) Hessian diagonal search: H+0.0383*I, length 7.0170e-04, result -1.3121e-05
-0.007 s (L-BFGS 1) 0.017 s (L-BFGS 2) Hessian diagonal search: H+0.0381*I, length 6.2293e-04, result -1.2954e-05
-0.008 s (L-BFGS 1) 0.028 s (L-BFGS 2) Hessian diagonal search: H+0.0382*I, length 6.7335e-04, result -1.3201e-05
-0.007 s (L-BFGS 1) 0.028 s (L-BFGS 2) Optimization step found (length 6.7295e-04)
-Convergence criterion reached in step size (1.00e-02)
-#========================================================#
-#| [92m               [0m[1mOptimization Converged[0m               [0m |#
-#| [92m           Final objective function value           [0m |#
-#| [92m  Full:  4.954169e-01  Un-penalized:  4.974661e-02  [0m |#
-#========================================================#
-#========================================================#
-#| [94m           Final optimization parameters:           [0m |#
-#========================================================#
-   0 [ -3.5550e-01 ] : ProperTorsions/Proper/k2/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   1 [  1.8283e-06 ] : ProperTorsions/Proper/k4/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   2 [ -6.3032e-07 ] : ProperTorsions/Proper/k3/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   3 [ -8.3330e-07 ] : ProperTorsions/Proper/k1/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   4 [  5.0070e-06 ] : ProperTorsions/Proper/k2/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   5 [ -9.5147e-03 ] : ProperTorsions/Proper/k4/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   6 [ -8.1137e-02 ] : ProperTorsions/Proper/k3/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   7 [  8.6535e-07 ] : ProperTorsions/Proper/k1/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-#========================================================#
-#| [94m             Final physical parameters:             [0m |#
-#========================================================#
-   0 [ -2.1330e+00 ] : ProperTorsions/Proper/k2/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   1 [  1.0970e-05 ] : ProperTorsions/Proper/k4/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   2 [  6.9859e-01 ] : ProperTorsions/Proper/k3/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   3 [ -4.9998e-06 ] : ProperTorsions/Proper/k1/[#35H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#1H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   4 [  3.0042e-05 ] : ProperTorsions/Proper/k2/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   5 [ -5.7088e-02 ] : ProperTorsions/Proper/k4/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   6 [  2.1177e-01 ] : ProperTorsions/Proper/k3/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-   7 [  5.1921e-06 ] : ProperTorsions/Proper/k1/[#1H0X1x0!r+0A:1]-;!@[#6H2X4x0!r+0A:2](-;!@[#1H0X1x0!r+0A])(-;!@[#35H0X1x0!r+0A])-;!@[#8H1X2x0!r+0A:3]-;!@[#1H0X1x0!r+0A:4]
-----------------------------------------------------------
-Backing up result/optimize/force-field.offxml -> result/optimize/force-field_2.offxml
-#========================================================================#
-#|  The force field has been written to the result/optimize directory.  |#
-#|    Input file with optimization parameters saved to optimize.sav.    |#
-#========================================================================#
-Wall time since calculation start: 55.4 seconds
-#========================================================#
-#| [1;44;93m               Calculation Finished.                [0m |#
-#| [1;44;93m     ---==(  May the Force be with you!  )==---     [0m |#
-#========================================================#
-Look in optimize.err for more (possibly relevant) printout.

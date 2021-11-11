@@ -81,8 +81,7 @@ def main() -> int:
     # write to json
     workflow.export_factory(f"./{args.id}/{args.id}_workflow.json")
     # or yaml
-    #workflow.export_factory("workflow.yaml")
-
+    workflow.export_factory(f"./{args.id}/{args.id}_workflow.yaml")
 
     target_molecule = Molecule.from_smiles(args.smiles)
     target_molecule.generate_conformers(n_conformers=1)
@@ -92,8 +91,6 @@ def main() -> int:
     logging.warning(f'Making the specific schema for {args.id}')
     schema = workflow.optimization_schema_from_molecule(molecule=target_molecule)
     logging.warning(f'Done making the schema')
-
-
 
     parameters = schema.parameters
     rd_mol = target_molecule.to_rdkit()
@@ -136,8 +133,20 @@ def main() -> int:
     #    width=900,
     #    height=600)
 
+    #initial and new paramters
     #result.results.refit_parameter_values
     #result.results.input_schema.initial_parameter_values
+
+    # Write old paramteres to json file (redundant)
+    old_parameters = {torsion.smirks: {k: q._value for k, q in parameters.items()} for torsion, parameters in result.results.input_schema.initial_parameter_values.items()}
+    with open(f"{args.id}/{args.id}_initial_parameter_values.json", "w") as f:
+      json.dump(old_parameters, f)
+
+    # Write new paramteres to json file (redundant)
+    new_parameters = {torsion.smirks: {k: q._value for k, q in parameters.items()} for torsion, parameters in result.results.refit_parameter_values.items()}
+    with open(f"{args.id}/{args.id}_refit_parameter_values.json", "w") as f:
+      json.dump(new_parameters, f)
+
     parameter_data = []
     for i, (parameter, initial_values) in enumerate(result.results.input_schema.initial_parameter_values.items()):
         for final_parameter, final_values in result.results.refit_parameter_values.items():
@@ -145,10 +154,10 @@ def main() -> int:
                 for term in range(1, 5):
                     k_before = initial_values[f"k{term}"].value_in_unit(unit.kilocalorie_per_mole)
                     k_after = final_values[f"k{term}"].value_in_unit(unit.kilocalorie_per_mole)
-                    parameter_data.append([f"smirks_{i}_k{term}", k_before, k_after, k_after - k_before])
+                    parameter_data.append([parameter.smirks, f"smirks_{i}_k{term}", k_before, k_after, k_after - k_before])
 
     # make a pandas dataframe
-    df = pd.DataFrame(parameter_data, columns=["parameter", "before", "after", "change"])
+    df = pd.DataFrame(parameter_data, columns=["smirks", "parameter", "before", "after", "change"])
     df.to_csv(f"{args.id}/{args.id}_parameter_changes.csv")
 
 
