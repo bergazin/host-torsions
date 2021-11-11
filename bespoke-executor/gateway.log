@@ -10,3 +10,13 @@
 [task id=b'coordinator:optimization:2'] fragmentation transitioned from waiting -> running
 [task id=b'coordinator:optimization:2'] fragmentation transitioned from running -> success
 [task id=b'coordinator:optimization:2'] qc-generation transitioned from waiting -> running
+[task id=b'coordinator:optimization:3'] transitioned from waiting -> running
+[task id=b'coordinator:optimization:3'] fragmentation transitioned from waiting -> running
+[task id=b'coordinator:optimization:3'] fragmentation transitioned from running -> success
+[task id=b'coordinator:optimization:3'] qc-generation transitioned from waiting -> running
+[task id=b'coordinator:optimization:2'] qc-generation transitioned from running -> success
+[task id=b'coordinator:optimization:3'] qc-generation transitioned from running -> success
+[task id=b'coordinator:optimization:2'] optimization transitioned from waiting -> running
+[task id=b'coordinator:optimization:3'] optimization transitioned from waiting -> running
+[task id=b'coordinator:optimization:2'] optimization transitioned from running -> success
+[task id=b'coordinator:optimization:2'] transitioned from running -> success

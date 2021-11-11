@@ -4,3 +4,6 @@ notes:
 following command will run bespoke on all fragments in fragments.csv file
 conda activate bespoke
 python run_all.py -fragments_csv_file host-systems/fragments.csv
+
+for a single smiles string/fragment etc:
+python run.py -smiles 'BrCO' -id BrCO

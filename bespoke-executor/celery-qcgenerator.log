@@ -1,18 +1,18 @@
-[2021-11-11 13:07:24,501: INFO/Process-2] Connected to redis://localhost:6379/0
-[2021-11-11 13:07:24,514: INFO/Process-2] mingle: searching for neighbors
-[2021-11-11 13:07:25,542: INFO/Process-2] mingle: all alone
-[2021-11-11 13:07:25,570: INFO/Process-2] celery@qcgenerator ready.
-[2021-11-11 13:07:39,301: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[672e55ba-b803-45c8-a57d-b70b53889070] received
-[2021-11-11 13:07:41,181: WARNING/ForkPoolWorker-1] Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
-[2021-11-11 13:09:38,713: INFO/Process-3] Connected to redis://localhost:6379/0
-[2021-11-11 13:09:38,731: INFO/Process-3] mingle: searching for neighbors
-[2021-11-11 13:09:39,753: INFO/Process-3] mingle: all alone
-[2021-11-11 13:09:39,772: INFO/Process-3] celery@qcgenerator ready.
-[2021-11-11 13:09:55,000: INFO/Process-3] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[9318bada-d2de-435e-b9a8-3fe030e09e16] received
-[2021-11-11 13:09:55,012: INFO/Process-3] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[e8bc0987-2948-45e3-b71d-571bccdc11bd] received
-[2021-11-11 13:09:55,024: INFO/Process-3] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[625470ae-e921-4a5a-9363-539cf431494d] received
-[2021-11-11 13:09:55,042: INFO/Process-3] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[a65d3ff9-b158-4635-9a25-0ec9d5a564f4] received
-[2021-11-11 13:09:56,773: WARNING/ForkPoolWorker-1] Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
-[2021-11-11 13:11:27,486: INFO/Process-3] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[107819ee-51b0-4fed-a7a4-d14f5e69ad64] received
-[2021-11-11 13:13:40,673: INFO/Process-3] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[03983610-9f08-4710-a64a-744e8d554e41] received
-[2021-11-11 13:15:52,853: INFO/Process-3] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[36756e7c-7076-4f04-97e0-31132bc0b3eb] received
+[2021-11-11 13:38:18,846: INFO/Process-2] Connected to redis://localhost:6379/0
+[2021-11-11 13:38:18,862: INFO/Process-2] mingle: searching for neighbors
+[2021-11-11 13:38:19,892: INFO/Process-2] mingle: all alone
+[2021-11-11 13:38:19,916: INFO/Process-2] celery@qcgenerator ready.
+[2021-11-11 13:38:33,811: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[01c3f635-a1af-4938-ab2b-89823ebdb0d7] received
+[2021-11-11 13:38:35,804: WARNING/ForkPoolWorker-1] Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+[2021-11-11 13:40:26,615: INFO/Process-3] Connected to redis://localhost:6379/0
+[2021-11-11 13:40:26,627: INFO/Process-3] mingle: searching for neighbors
+[2021-11-11 13:40:27,651: INFO/Process-3] mingle: all alone
+[2021-11-11 13:40:27,683: INFO/Process-3] celery@qcgenerator ready.
+[2021-11-11 13:40:42,964: INFO/Process-3] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[0c6cdc5c-6821-46a0-a57e-dedd23e9cd23] received
+[2021-11-11 13:40:42,975: INFO/Process-3] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[aa796530-9254-48b7-a2b1-2f3c9ec22030] received
+[2021-11-11 13:40:42,987: INFO/Process-3] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[95f06365-56d6-4142-b944-b01c1da7786c] received
+[2021-11-11 13:40:43,008: INFO/Process-3] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[770a0a4b-ad6a-4507-80a9-1fffa5d00e7e] received
+[2021-11-11 13:40:44,857: WARNING/ForkPoolWorker-1] Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+[2021-11-11 13:42:17,487: INFO/Process-3] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[f4393312-71ea-489b-93a0-d980dc037c61] received
+[2021-11-11 13:43:31,696: INFO/Process-3] sync with celery@fragmenter
+[2021-11-11 13:43:31,699: INFO/Process-3] sync with celery@optimizer

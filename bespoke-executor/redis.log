@@ -1,17 +1,34 @@
-80837:C 11 Nov 2021 13:09:33.016 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-80837:C 11 Nov 2021 13:09:33.016 # Redis version=6.2.6, bits=64, commit=00000000, modified=0, pid=80837, just started
-80837:C 11 Nov 2021 13:09:33.016 # Configuration loaded
-80837:M 11 Nov 2021 13:09:33.017 * Increased maximum number of open files to 10032 (it was originally set to 256).
-80837:M 11 Nov 2021 13:09:33.017 * monotonic clock: POSIX clock_gettime
-80837:M 11 Nov 2021 13:09:33.019 * Running mode=standalone, port=6379.
-80837:M 11 Nov 2021 13:09:33.019 # Server initialized
-80837:M 11 Nov 2021 13:09:33.019 * Loading RDB produced by version 6.2.6
-80837:M 11 Nov 2021 13:09:33.019 * RDB age 11 seconds
-80837:M 11 Nov 2021 13:09:33.019 * RDB memory usage when created 1.61 Mb
-80837:M 11 Nov 2021 13:09:33.020 # Done loading RDB, keys loaded: 11, keys expired: 0.
-80837:M 11 Nov 2021 13:09:33.020 * DB loaded from disk: 0.001 seconds
-80837:M 11 Nov 2021 13:09:33.020 * Ready to accept connections
-80837:M 11 Nov 2021 13:14:34.084 * 100 changes in 300 seconds. Saving...
-80837:M 11 Nov 2021 13:14:34.085 * Background saving started by pid 80933
-80933:C 11 Nov 2021 13:14:34.097 * DB saved on disk
-80837:M 11 Nov 2021 13:14:34.187 * Background saving terminated with success
+82373:C 11 Nov 2021 13:40:20.383 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+82373:C 11 Nov 2021 13:40:20.383 # Redis version=6.2.6, bits=64, commit=00000000, modified=0, pid=82373, just started
+82373:C 11 Nov 2021 13:40:20.383 # Configuration loaded
+82373:M 11 Nov 2021 13:40:20.384 * Increased maximum number of open files to 10032 (it was originally set to 256).
+82373:M 11 Nov 2021 13:40:20.384 * monotonic clock: POSIX clock_gettime
+82373:M 11 Nov 2021 13:40:20.385 * Running mode=standalone, port=6379.
+82373:M 11 Nov 2021 13:40:20.385 # Server initialized
+82373:M 11 Nov 2021 13:40:20.385 * Loading RDB produced by version 6.2.6
+82373:M 11 Nov 2021 13:40:20.385 * RDB age 14 seconds
+82373:M 11 Nov 2021 13:40:20.385 * RDB memory usage when created 1.61 Mb
+82373:M 11 Nov 2021 13:40:20.386 # Done loading RDB, keys loaded: 11, keys expired: 0.
+82373:M 11 Nov 2021 13:40:20.386 * DB loaded from disk: 0.001 seconds
+82373:M 11 Nov 2021 13:40:20.386 * Ready to accept connections
+82373:M 11 Nov 2021 13:44:30.085 * 200 changes in 60 seconds. Saving...
+82373:M 11 Nov 2021 13:44:30.091 * Background saving started by pid 82532
+82532:C 11 Nov 2021 13:44:30.098 * DB saved on disk
+82373:M 11 Nov 2021 13:44:30.194 * Background saving terminated with success
+82373:M 11 Nov 2021 13:49:31.070 * 100 changes in 300 seconds. Saving...
+82373:M 11 Nov 2021 13:49:31.076 * Background saving started by pid 82561
+82561:C 11 Nov 2021 13:49:31.085 * DB saved on disk
+82373:M 11 Nov 2021 13:49:31.179 * Background saving terminated with success
+82373:M 11 Nov 2021 13:54:32.093 * 100 changes in 300 seconds. Saving...
+82373:M 11 Nov 2021 13:54:32.099 * Background saving started by pid 83206
+83206:C 11 Nov 2021 13:54:32.122 * DB saved on disk
+82373:M 11 Nov 2021 13:54:32.203 * Background saving terminated with success
+82373:M 11 Nov 2021 13:59:33.029 * 100 changes in 300 seconds. Saving...
+82373:M 11 Nov 2021 13:59:33.030 * Background saving started by pid 84352
+84352:C 11 Nov 2021 13:59:33.061 * DB saved on disk
+82373:M 11 Nov 2021 13:59:33.133 * Background saving terminated with success
+82373:signal-handler (1636668174) Received SIGTERM scheduling shutdown...
+82373:M 11 Nov 2021 14:02:54.926 # User requested shutdown...
+82373:M 11 Nov 2021 14:02:54.926 * Saving the final RDB snapshot before exiting.
+82373:M 11 Nov 2021 14:02:54.944 * DB saved on disk
+82373:M 11 Nov 2021 14:02:54.944 # Redis is now ready to exit, bye bye...
