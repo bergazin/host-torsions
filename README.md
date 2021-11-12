@@ -1,7 +1,7 @@
 # What's here
 Repo for the host-torsions project.
 
-OpenFF came out with [Bespokefit](https://github.com/openforcefield/bespoke-fit) which builds custom torsion parameters for individual molecules. This will be used to build custom torions for several host systems. Afterwards, free energy calculations will be run to see what difference the customs torsions make, and how these impact host-guest binding predictions.
+OpenFF came out with [Bespokefit](https://github.com/openforcefield/bespoke-fit) which builds custom torsion parameters for individual molecules. This will be used to build custom torsions for several host systems. Afterwards, free energy calculations will be run to see what difference the customs torsions make, and how these impact host-guest binding predictions.
 
 Conformer and charge generation is tricky for larger macrocycles, so bespoke cannot be run on the entire host. Instead, each host that gets looked at will be chopped up into its repeating units, then run through bespoke. Afterwards, the parameters will be applied to the entire host system.
 
