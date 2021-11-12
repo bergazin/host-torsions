@@ -15,7 +15,7 @@ Conformer and charge generation is tricky for larger macrocycles, so bespoke can
 - [ ] MAYBE the [SAMPL9 WP6 host](https://github.com/samplchallenges/sampl9)
 
 
-#### ______________________________________________________________________________________
+______________________________________________________________________________________
 #### Setting up Bespokefit for this project:
 1. Clone OpenFF [Bespokefit repo](https://github.com/openforcefield/bespoke-fit)
 2. Add `xtb-python` to `bespoke-fit/devtools/conda-envs/test-env.yaml`
