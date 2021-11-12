@@ -1,0 +1,11 @@
+[2021-11-12 13:11:54,910: INFO/Process-1] Connected to redis://localhost:6379/0
+[2021-11-12 13:11:54,922: INFO/Process-1] mingle: searching for neighbors
+[2021-11-12 13:11:55,950: INFO/Process-1] mingle: all alone
+[2021-11-12 13:11:55,982: INFO/Process-1] celery@qcgenerator ready.
+[2021-11-12 13:12:16,041: INFO/Process-1] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[79c70dd2-9816-407e-a6bc-836ce06ae036] received
+[2021-11-12 13:12:16,052: INFO/Process-1] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[bef6fbe1-34de-4f0b-abf1-b586bb7fb166] received
+[2021-11-12 13:12:16,068: INFO/Process-1] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[77492c91-aa4d-4151-b6a0-6b2680aa6194] received
+[2021-11-12 13:12:16,100: INFO/Process-1] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[0bb8b032-3d96-405a-afef-88842e2bf5df] received
+[2021-11-12 13:12:16,120: INFO/Process-1] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[c476d375-5b06-4745-a2de-dcdc4b0afce7] received
+[2021-11-12 13:12:16,167: INFO/Process-1] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[4550a69f-678b-49a4-b5de-74999febece1] received
+[2021-11-12 13:12:16,194: INFO/Process-1] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[2a500e34-7f85-4326-b20e-b1f59bf551db] received

@@ -1,0 +1,4 @@
+[2021-11-12 11:42:42,349: INFO/Process-2] Connected to redis://localhost:6379/0
+[2021-11-12 11:42:42,368: INFO/Process-2] mingle: searching for neighbors
+[2021-11-12 11:42:43,399: INFO/Process-2] mingle: all alone
+[2021-11-12 11:42:43,426: INFO/Process-2] celery@qcgenerator ready.

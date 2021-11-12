@@ -1,0 +1,54 @@
+[2021-11-12 13:11:54,523: INFO/Process-2] Connected to redis://localhost:6379/0
+[2021-11-12 13:11:54,544: INFO/Process-2] mingle: searching for neighbors
+[2021-11-12 13:11:55,579: INFO/Process-2] mingle: all alone
+[2021-11-12 13:11:55,604: INFO/Process-2] celery@optimizer ready.
+[2021-11-12 13:22:09,677: INFO/Process-2] Task openff.bespokefit.executor.services.optimizer.worker.optimize[860badae-b329-4de2-8eab-3ce49f25317b] received
+[2021-11-12 13:22:10,107: INFO/ForkPoolWorker-1] making new fb folders in 860badae-b329-4de2-8eab-3ce49f25317b
+[2021-11-12 13:22:10,157: WARNING/ForkPoolWorker-1]   0%|          | 0/7 [00:00<?, ?it/s]
+[2021-11-12 13:22:10,157: WARNING/ForkPoolWorker-1]                                      
+[2021-11-12 13:22:10,158: WARNING/ForkPoolWorker-1] 
+[2021-11-12 13:22:10,158: WARNING/ForkPoolWorker-1] generating target directory for torsion-0
+[2021-11-12 13:22:10,158: WARNING/ForkPoolWorker-1] 
+
+[2021-11-12 13:22:10,159: WARNING/ForkPoolWorker-1]   0%|          | 0/7 [00:00<?, ?it/s]
+[2021-11-12 13:22:10,825: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:04,  1.50it/s]
+[2021-11-12 13:22:10,825: WARNING/ForkPoolWorker-1]                                              
+[2021-11-12 13:22:10,825: WARNING/ForkPoolWorker-1] 
+[2021-11-12 13:22:10,826: WARNING/ForkPoolWorker-1] generating target directory for torsion-1
+[2021-11-12 13:22:10,826: WARNING/ForkPoolWorker-1] 
+
+[2021-11-12 13:22:10,827: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:04,  1.50it/s]
+[2021-11-12 13:22:10,836: WARNING/ForkPoolWorker-1]                                              
+[2021-11-12 13:22:10,837: WARNING/ForkPoolWorker-1] 
+[2021-11-12 13:22:10,837: WARNING/ForkPoolWorker-1] generating target directory for torsion-2
+[2021-11-12 13:22:10,838: WARNING/ForkPoolWorker-1] 
+
+[2021-11-12 13:22:10,838: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:04,  1.50it/s]
+[2021-11-12 13:22:10,849: WARNING/ForkPoolWorker-1]                                              
+[2021-11-12 13:22:10,849: WARNING/ForkPoolWorker-1] 
+[2021-11-12 13:22:10,849: WARNING/ForkPoolWorker-1] generating target directory for torsion-3
+[2021-11-12 13:22:10,850: WARNING/ForkPoolWorker-1] 
+
+[2021-11-12 13:22:10,850: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:04,  1.50it/s]
+[2021-11-12 13:22:10,858: WARNING/ForkPoolWorker-1]                                              
+[2021-11-12 13:22:10,858: WARNING/ForkPoolWorker-1] 
+[2021-11-12 13:22:10,859: WARNING/ForkPoolWorker-1] generating target directory for torsion-4
+[2021-11-12 13:22:10,859: WARNING/ForkPoolWorker-1] 
+
+[2021-11-12 13:22:10,860: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:04,  1.50it/s]
+[2021-11-12 13:22:10,869: WARNING/ForkPoolWorker-1]                                              
+[2021-11-12 13:22:10,870: WARNING/ForkPoolWorker-1] 
+[2021-11-12 13:22:10,870: WARNING/ForkPoolWorker-1] generating target directory for torsion-5
+[2021-11-12 13:22:10,871: WARNING/ForkPoolWorker-1] 
+
+[2021-11-12 13:22:10,871: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:04,  1.50it/s]
+[2021-11-12 13:22:10,882: WARNING/ForkPoolWorker-1]                                              
+[2021-11-12 13:22:10,883: WARNING/ForkPoolWorker-1] 
+[2021-11-12 13:22:10,883: WARNING/ForkPoolWorker-1] generating target directory for torsion-6
+[2021-11-12 13:22:10,883: WARNING/ForkPoolWorker-1] 
+
+[2021-11-12 13:22:10,884: WARNING/ForkPoolWorker-1]  14%|#4        | 1/7 [00:00<00:04,  1.50it/s]
+[2021-11-12 13:22:10,895: WARNING/ForkPoolWorker-1] 100%|##########| 7/7 [00:00<00:00,  9.50it/s]
+[2021-11-12 13:22:10,895: WARNING/ForkPoolWorker-1] 
+
+[2021-11-12 13:31:16,147: INFO/ForkPoolWorker-1] Task openff.bespokefit.executor.services.optimizer.worker.optimize[860badae-b329-4de2-8eab-3ce49f25317b] succeeded in 546.4656740480001s: '{"type": "bespoke", "input_schema": {"type": "bespoke", "id": "860badae-b329-4de2-8eab-3ce49f25317b", "initial_force_field": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<SMIRNOFF version=\"0.3\" aromaticity_model=\"OEAroModel_MDL\">\n    <Author>The Open Force Field Initiative</Author>\n    <Date>2021-08-16</Date>\n    <Bonds version=\"0.4\" potential=\"harmonic\" fractional_bondorder_method=\"AM1-Wiberg\" fractional_bondorder_interpolation=\"linear\">\n        <Bond smirks=\"[#6X4:1]-[#6X4:2]\" id=\"b1\" length=\"1.52190126495 * angstrom\" k=\"529.2429715351 * angstrom**-2 * mole**-1 * kilocalorie\"></Bond>\n        <Bond smirks=\"[#6X4:1]-[#6X3:2]\" id=\"b2\" length=\"1.498646816465 * angstrom\" k=\"579.4762652679 * angstrom**-2 * mole**-1 * kilocalorie\"></Bond>\n        <Bond smirks=\"[#6X4:1]-[#6X3:2]=[#8X1+0]\" id=\"b3\" length=\"1.523435958334 * angstrom\" k=\"658.8829076219 * angstrom**-2 * mole**-1 * kilocalorie\"></Bond>\n        <Bond smirks=\"[#6X3:1]-[#6X3:2]\" id=\"b4\" length=\"1.454628925034...'

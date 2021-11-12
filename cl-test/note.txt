@@ -1,0 +1,2 @@
+command to run:
+openff-bespoke executor run --input ../BrCO/BrCO.sdf --spec-file ../BrCO/BrCO_workflow.json

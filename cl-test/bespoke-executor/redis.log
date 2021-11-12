@@ -1,0 +1,18 @@
+86362:C 11 Nov 2021 15:22:12.503 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+86362:C 11 Nov 2021 15:22:12.503 # Redis version=6.2.6, bits=64, commit=00000000, modified=0, pid=86362, just started
+86362:C 11 Nov 2021 15:22:12.503 # Configuration loaded
+86362:M 11 Nov 2021 15:22:12.504 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86362:M 11 Nov 2021 15:22:12.504 * monotonic clock: POSIX clock_gettime
+86362:M 11 Nov 2021 15:22:12.507 * Running mode=standalone, port=6379.
+86362:M 11 Nov 2021 15:22:12.507 # Server initialized
+86362:M 11 Nov 2021 15:22:12.508 * Loading RDB produced by version 6.2.6
+86362:M 11 Nov 2021 15:22:12.508 * RDB age 60 seconds
+86362:M 11 Nov 2021 15:22:12.508 * RDB memory usage when created 1.09 Mb
+86362:M 11 Nov 2021 15:22:12.508 # Done loading RDB, keys loaded: 11, keys expired: 0.
+86362:M 11 Nov 2021 15:22:12.508 * DB loaded from disk: 0.001 seconds
+86362:M 11 Nov 2021 15:22:12.508 * Ready to accept connections
+86362:signal-handler (1636673203) Received SIGTERM scheduling shutdown...
+86362:M 11 Nov 2021 15:26:43.529 # User requested shutdown...
+86362:M 11 Nov 2021 15:26:43.530 * Saving the final RDB snapshot before exiting.
+86362:M 11 Nov 2021 15:26:43.538 * DB saved on disk
+86362:M 11 Nov 2021 15:26:43.538 # Redis is now ready to exit, bye bye...

@@ -1,0 +1,1 @@
+openff-bespoke executor run --input OA-fragment-4.sdf --spec-file OA-fragment-4_workflow.json --n-qc-compute-workers 4

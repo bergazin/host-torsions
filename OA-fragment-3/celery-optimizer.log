@@ -1,0 +1,4 @@
+[2021-11-12 11:06:49,377: INFO/Process-1] Connected to redis://localhost:6379/0
+[2021-11-12 11:06:49,390: INFO/Process-1] mingle: searching for neighbors
+[2021-11-12 11:06:50,417: INFO/Process-1] mingle: all alone
+[2021-11-12 11:06:50,446: INFO/Process-1] celery@optimizer ready.

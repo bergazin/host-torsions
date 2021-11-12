@@ -1,0 +1,29 @@
+[2021-11-12 11:06:49,316: INFO/Process-3] Connected to redis://localhost:6379/0
+[2021-11-12 11:06:49,331: INFO/Process-3] mingle: searching for neighbors
+[2021-11-12 11:06:50,371: INFO/Process-3] mingle: all alone
+[2021-11-12 11:06:50,399: INFO/Process-3] celery@fragmenter ready.
+[2021-11-12 11:09:48,931: INFO/Process-3] Task openff.bespokefit.executor.services.fragmenter.worker.fragment[1376fa85-4036-4785-8c3a-32311e167a0f] received
+[2021-11-12 11:09:49,575: ERROR/ForkPoolWorker-1] Task openff.bespokefit.executor.services.fragmenter.worker.fragment[1376fa85-4036-4785-8c3a-32311e167a0f] raised unexpected: RuntimeError('\n')
+Traceback (most recent call last):
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/celery/app/trace.py", line 450, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/celery/app/trace.py", line 731, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/bespokefit/executor/services/fragmenter/worker.py", line 26, in fragment
+    return fragmenter.fragment(molecule, target_bond_smarts=target_bond_smarts).json()
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/fragmenter/fragment.py", line 916, in fragment
+    result = self._fragment(molecule, target_bond_smarts)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/fragmenter/fragment.py", line 1012, in _fragment
+    molecule = assign_elf10_am1_bond_orders(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/fragmenter/chemi.py", line 42, in assign_elf10_am1_bond_orders
+    molecule.apply_elf_conformer_selection()
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/toolkit/topology/molecule.py", line 3361, in apply_elf_conformer_selection
+    toolkit_registry.call(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/toolkit/utils/toolkit_registry.py", line 366, in call
+    raise e
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/toolkit/utils/toolkit_registry.py", line 362, in call
+    return method(*args, **kwargs)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/toolkit/utils/openeye_wrapper.py", line 1776, in apply_elf_conformer_selection
+    raise RuntimeError("\n" + output_string)
+RuntimeError: 
+

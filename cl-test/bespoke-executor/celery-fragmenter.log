@@ -1,0 +1,97 @@
+[2021-11-11 15:21:00,098: INFO/Process-3] Connected to redis://localhost:6379/0
+[2021-11-11 15:21:00,119: INFO/Process-3] mingle: searching for neighbors
+[2021-11-11 15:21:01,154: INFO/Process-3] mingle: all alone
+[2021-11-11 15:21:01,195: INFO/Process-3] celery@fragmenter ready.
+[2021-11-11 15:21:10,392: INFO/Process-3] Task openff.bespokefit.executor.services.fragmenter.worker.fragment[5784495a-b0a4-4464-b04c-ee3362381e50] received
+[2021-11-11 15:21:13,789: WARNING/ForkPoolWorker-1] /Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/celery/app/trace.py:657: RuntimeWarning: Exception raised outside body: ConnectionError('Error 61 connecting to localhost:6379. Connection refused.'):
+Traceback (most recent call last):
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/redis/connection.py", line 1198, in get_connection
+    if connection.can_read():
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/celery/app/trace.py", line 517, in trace_task
+    mark_as_done(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/celery/backends/base.py", line 161, in mark_as_done
+    self.store_result(task_id, result, state, request=request)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/celery/backends/base.py", line 482, in store_result
+    self._store_result(task_id, result, state, traceback,
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/celery/backends/base.py", line 903, in _store_result
+    current_meta = self._get_task_meta_for(task_id)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/celery/backends/base.py", line 925, in _get_task_meta_for
+    meta = self.get(self.get_key_for_task(task_id))
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/celery/backends/redis.py", line 367, in get
+    return self.client.get(key)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/redis/client.py", line 1606, in get
+    return self.execute_command('GET', name)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/redis/connection.py", line 1202, in get_connection
+    connection.connect()
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
+
+  warn(RuntimeWarning(
+
+[2021-11-11 15:21:13,797: ERROR/ForkPoolWorker-1] Pool process <celery.concurrency.asynpool.Worker object at 0x165c513a0> error: BrokenPipeError(32, 'Broken pipe')
+Traceback (most recent call last):
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/pool.py", line 366, in workloop
+    put((READY, (job, i, result, inqW_fd)))
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/queues.py", line 366, in put
+    self.send_payload(ForkingPickler.dumps(obj))
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/queues.py", line 358, in send_payload
+    self._writer.send_bytes(value)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/connection.py", line 227, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/connection.py", line 453, in _send_bytes
+    self._send(header + buf)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/connection.py", line 406, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/pool.py", line 292, in __call__
+    sys.exit(self.workloop(pid=pid))
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/pool.py", line 374, in workloop
+    put((READY, (job, i, (False, einfo), inqW_fd)))
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/queues.py", line 366, in put
+    self.send_payload(ForkingPickler.dumps(obj))
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/queues.py", line 358, in send_payload
+    self._writer.send_bytes(value)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/connection.py", line 227, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/connection.py", line 453, in _send_bytes
+    self._send(header + buf)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/billiard/connection.py", line 406, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+[2021-11-11 15:22:20,413: INFO/Process-3] Connected to redis://localhost:6379/0
+[2021-11-11 15:22:20,441: INFO/Process-3] mingle: searching for neighbors
+[2021-11-11 15:22:21,462: INFO/Process-3] mingle: all alone
+[2021-11-11 15:22:21,500: INFO/Process-3] celery@fragmenter ready.
+[2021-11-11 15:22:25,851: INFO/Process-3] Task openff.bespokefit.executor.services.fragmenter.worker.fragment[6286e1f3-6646-4d03-a56c-c320aa44955f] received
+[2021-11-11 15:22:26,514: INFO/ForkPoolWorker-1] Task openff.bespokefit.executor.services.fragmenter.worker.fragment[6286e1f3-6646-4d03-a56c-c320aa44955f] succeeded in 0.6616734209999997s: '{"parent_smiles": "[H:4][C:1]([H:5])([O:2][H:6])[Br:3]", "fragments": [{"smiles": "[H:4][C:1]([H:5])([O:2][H:6])[Br:3]", "bond_indices": [1, 2]}], "provenance": {"creator": "openff.fragmenter", "version": "0.1.2", "options": {"functional_groups": {"hydrazine": "[NX3:1][NX3:2]", "hydrazone": "[NX3:1][NX2:2]", "nitric_oxide": "[N:1]-[O:2]", "amide": "[#7:1][#6:2](=[#8:3])", "amide_n": "[#7:1][#6:2](-[O-:3])", "amide_2": "[NX3:1][CX3:2](=[OX1:3])[NX3:4]", "aldehyde": "[CX3H1:1](=[O:2])[#6:3]", "sulfoxide_1": "[#16X3:1]=[OX1:2]", "sulfoxide_2": "[#16X3+:1][OX1-:2]", "sulfonyl": "[#16X4:1](=[OX1:2])=[OX1:3]", "sulfinic_acid": "[#16X3:1](=[OX1:2])[OX2H,OX1H0-:3]", "sulfinamide": "[#16X4:1](=[OX1:2])(=[OX1:3])([NX3R0:4])", "sulfonic_acid": "[#16X4:1](=[OX1:2])(=[OX1:3])[OX2H,OX1H0-:4]", "phosphine_oxide": "[PX4:1](=[OX1:2])([#6:3])([#6:4])([#6:5])", "phosphonate": "[P:1](=[OX1:2])([OX2H,OX1-:3])([OX2H,OX1-:4])", "phosphate": "[PX4:1](=[OX1:2])([#8:3])([#8:4])([#8:5])", "carboxylic_acid":...'

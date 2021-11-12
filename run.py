@@ -105,9 +105,7 @@ def main() -> int:
         rd_mols.append(rd_mol)
         atoms.append(flat_matches)
 
-    logging.warning('Highlighting torsions')
-    img = Draw.MolsToGridImage(rd_mols, highlightAtomLists=atoms)
-    img.save(f"./{args.id}/{args.id}.png")#,bbox_inches=’tight’)
+
 
     # set keep files to true so we can view the results
     os.environ["BEFLOW_KEEP_FILES"] = "True"
@@ -211,6 +209,9 @@ def main() -> int:
     logging.warning(f'Bespoke run for {args.id} is done')
     logging.warning(f'Check the "{args.id}" folder for output files')
 
+    logging.warning('Highlighting torsions')
+    img = Draw.MolsToGridImage(rd_mols, highlightAtomLists=atoms)
+    img.save(f"./{args.id}/{args.id}.png")#,bbox_inches=’tight’)
     return 0
 
 if __name__ == "__main__":
