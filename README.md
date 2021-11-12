@@ -7,11 +7,11 @@ Conformer and charge generation is tricky for larger macrocycles, so bespoke can
 
 
 **Host to do list:**
-- [ ] GDCC hosts from SAMPL7 and SAMPL8 https://github.com/samplchallenges/SAMPL7/tree/master/host_guest/GDCC_and_guests (or https://github.com/samplchallenges/sampl8) **[WIP]**
+- [ ] GDCC hosts from [SAMPL7](https://github.com/samplchallenges/SAMPL7/tree/master/host_guest/GDCC_and_guests) and [SAMPL8](https://github.com/samplchallenges/sampl8) **[WIP]**
   - [ ] OA **[WIP]**
   - [ ] exo OA **[TO DO]**
-- [ ] Cyclodextrins. set of modified cyclodextrin derivatives: https://github.com/samplchallenges/SAMPL7/tree/master/host_guest/cyclodextrin_derivatives **[TO DO]**
-- [ ] MAYBE the SAMPL9 WP6 host: https://github.com/samplchallenges/sampl9
+- [ ] Cyclodextrins. Set of [modified cyclodextrin derivatives](https://github.com/samplchallenges/SAMPL7/tree/master/host_guest/cyclodextrin_derivatives) **[TO DO]**
+- [ ] MAYBE the [SAMPL9 WP6 host](https://github.com/samplchallenges/sampl9)
 
 
 
