@@ -1,5 +1,10 @@
 # What's here
-Scripts for running Bespokefit on host systems and results.
+Repo for the host-torsions project.
+
+OpenFF came out with [Bespokefit](https://github.com/openforcefield/bespoke-fit) which builds custom torsion parameters for individual molecules. This will be used to build custom torions for several host systems. Afterwards, free energy calculations will be run to see what difference the customs torsions make, and how these impact host-guest binding predictions.
+
+Conformer and charge generation is tricky for larger macrocycles, so bespoke cannot be run on the entire host. Instead, each host that gets looked at will be chopped up into its repeating units, then run through bespoke. Afterwards, the parameters will be applied to the entire host system.
+
 
 **Host to do list:**
 - [ ] GDCC hosts from SAMPL7 and SAMPL8 https://github.com/samplchallenges/SAMPL7/tree/master/host_guest/GDCC_and_guests (or https://github.com/samplchallenges/sampl8) **[WIP]**
@@ -8,8 +13,10 @@ Scripts for running Bespokefit on host systems and results.
 - [ ] Cyclodextrins. set of modified cyclodextrin derivatives: https://github.com/samplchallenges/SAMPL7/tree/master/host_guest/cyclodextrin_derivatives **[TO DO]**
 - [ ] MAYBE the SAMPL9 WP6 host: https://github.com/samplchallenges/sampl9
 
+
+
 Setting up Bespokefit for this project:
-1. Clone openFF bespokefit
+1. Clone OpenFF [Bespokefit repo](https://github.com/openforcefield/bespoke-fit)
 2. Add `xtb-python` to `bespoke-fit/devtools/conda-envs/test-env.yaml`
 2. Create environemnt from testing environment `conda env update -n bespoke --file bespoke-fit/devtools/conda-envs/test-env.yaml`. Install additonal packages: `conda install -c conda-forge mamba seaborn`.
 4. Execute `python setup.py develop` in `bespoke-fit/`
