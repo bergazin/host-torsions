@@ -6,7 +6,7 @@ OpenFF came out with [Bespokefit](https://github.com/openforcefield/bespoke-fit)
 Conformer and charge generation is tricky for larger macrocycles, so bespoke cannot be run on the entire host. Instead, each host that gets looked at will be chopped up into its repeating units, then run through bespoke. Afterwards, the parameters will be applied to the entire host system.
 
 
-#### Host to do list:
+### Host to do list:
 - [ ] GDCC hosts from [SAMPL7](https://github.com/samplchallenges/SAMPL7/tree/master/host_guest/GDCC_and_guests) and [SAMPL8](https://github.com/samplchallenges/sampl8) **[WIP]**
   - [ ] OA **[WIP]**
   - [ ] exo OA **[TO DO]**
@@ -15,7 +15,7 @@ Conformer and charge generation is tricky for larger macrocycles, so bespoke can
 
 
 
-##### Setting up Bespokefit for this project:
+#### Setting up Bespokefit for this project:
 1. Clone OpenFF [Bespokefit repo](https://github.com/openforcefield/bespoke-fit)
 2. Add `xtb-python` to `bespoke-fit/devtools/conda-envs/test-env.yaml`
 2. Create environemnt from testing environment `conda env update -n bespoke --file bespoke-fit/devtools/conda-envs/test-env.yaml`. Install additonal packages: `conda install -c conda-forge mamba seaborn`.
