@@ -1,14 +1,4 @@
-[2021-11-11 13:38:18,834: INFO/Process-3] Connected to redis://localhost:6379/0
-[2021-11-11 13:38:18,855: INFO/Process-3] mingle: searching for neighbors
-[2021-11-11 13:38:19,883: INFO/Process-3] mingle: all alone
-[2021-11-11 13:38:19,909: INFO/Process-3] celery@fragmenter ready.
-[2021-11-11 13:38:23,681: INFO/Process-3] Task openff.bespokefit.executor.services.fragmenter.worker.fragment[5e9f5c25-fdfa-4a21-9107-fde7c80b98bd] received
-[2021-11-11 13:38:24,568: INFO/ForkPoolWorker-1] Task openff.bespokefit.executor.services.fragmenter.worker.fragment[5e9f5c25-fdfa-4a21-9107-fde7c80b98bd] succeeded in 0.8854077650000001s: '{"parent_smiles": "[H:4][C:1]([H:5])([O:2][H:6])[Br:3]", "fragments": [{"smiles": "[H:4][C:1]([H:5])([O:2][H:6])[Br:3]", "bond_indices": [1, 2]}], "provenance": {"creator": "openff.fragmenter", "version": "0.1.2", "options": {"functional_groups": {"hydrazine": "[NX3:1][NX3:2]", "hydrazone": "[NX3:1][NX2:2]", "nitric_oxide": "[N:1]-[O:2]", "amide": "[#7:1][#6:2](=[#8:3])", "amide_n": "[#7:1][#6:2](-[O-:3])", "amide_2": "[NX3:1][CX3:2](=[OX1:3])[NX3:4]", "aldehyde": "[CX3H1:1](=[O:2])[#6:3]", "sulfoxide_1": "[#16X3:1]=[OX1:2]", "sulfoxide_2": "[#16X3+:1][OX1-:2]", "sulfonyl": "[#16X4:1](=[OX1:2])=[OX1:3]", "sulfinic_acid": "[#16X3:1](=[OX1:2])[OX2H,OX1H0-:3]", "sulfinamide": "[#16X4:1](=[OX1:2])(=[OX1:3])([NX3R0:4])", "sulfonic_acid": "[#16X4:1](=[OX1:2])(=[OX1:3])[OX2H,OX1H0-:4]", "phosphine_oxide": "[PX4:1](=[OX1:2])([#6:3])([#6:4])([#6:5])", "phosphonate": "[P:1](=[OX1:2])([OX2H,OX1-:3])([OX2H,OX1-:4])", "phosphate": "[PX4:1](=[OX1:2])([#8:3])([#8:4])([#8:5])", "carboxylic_acid":...'
-[2021-11-11 13:40:26,589: INFO/Process-2] Connected to redis://localhost:6379/0
-[2021-11-11 13:40:26,604: INFO/Process-2] mingle: searching for neighbors
-[2021-11-11 13:40:27,631: INFO/Process-2] mingle: all alone
-[2021-11-11 13:40:27,668: INFO/Process-2] celery@fragmenter ready.
-[2021-11-11 13:40:32,061: INFO/Process-2] Task openff.bespokefit.executor.services.fragmenter.worker.fragment[43c8d20a-39cc-4bec-b1ee-e4037014b475] received
-[2021-11-11 13:40:34,859: INFO/ForkPoolWorker-1] Task openff.bespokefit.executor.services.fragmenter.worker.fragment[43c8d20a-39cc-4bec-b1ee-e4037014b475] succeeded in 2.796129754999999s: '{"parent_smiles": "[H:22][c:1]1[c:7]([c:2]([c:10]([c:5]([c:9]1[O:19][c:11]2[c:3]([c:8]([c:4]([c:12]([c:6]2[H:27])[O:21][C:16]([H:34])([H:35])[H:36])[H:25])[C:14]([H:28])([H:29])[H:30])[H:24])[H:26])[O:20][C:15]([H:31])([H:32])[H:33])[H:23])[C:13](=[O:17])[O:18][H:37]", "fragments": [{"smiles": "[H:26][c:5]1[c:9]([c:1]([c:7]([c:2]([c:10]1[H])[H:23])[C:13](=[O:17])[O:18][H:37])[H:22])[H]", "bond_indices": [7, 13]}, {"smiles": "[H:26][c:5]1[c:9]([c:1]([c:7]([c:2]([c:10]1[H])[H:23])[C:13](=[O:17])[O:18][H:37])[H:22])[H]", "bond_indices": [13, 18]}, {"smiles": "[H:24][c:3]1[c:8]([c:4]([c:12]([c:6]([c:11]1[H])[H:27])[O:21][C:16]([H:34])([H:35])[H:36])[H:25])[H]", "bond_indices": [12, 21]}, {"smiles": "[H:22][c:1]1[c:7]([c:2]([c:10]([c:5]([c:9]1[H])[H:26])[O:20][C:15]([H:31])([H:32])[H:33])[H:23])[H]", "bond_indices": [10, 20]}, {"smiles": "[H:27][c:6]1[c:11]([c:3]([c:8]([c:4]([c:12]1[H])[H:25])[C:14]([H:28])([H:29])[H:30])[H:24])[H]", "bond_indices": [8, 14]}, {"smiles":...'
-[2021-11-11 13:43:31,699: INFO/Process-2] sync with celery@optimizer
-[2021-11-11 13:43:31,702: INFO/Process-2] sync with celery@qcgenerator
+[2021-11-12 14:18:52,093: INFO/Process-1] Connected to redis://localhost:6379/0
+[2021-11-12 14:18:52,116: INFO/Process-1] mingle: searching for neighbors
+[2021-11-12 14:18:53,146: INFO/Process-1] mingle: all alone
+[2021-11-12 14:18:53,171: INFO/Process-1] celery@fragmenter ready.

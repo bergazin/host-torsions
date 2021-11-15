@@ -1,34 +1,24 @@
-82373:C 11 Nov 2021 13:40:20.383 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-82373:C 11 Nov 2021 13:40:20.383 # Redis version=6.2.6, bits=64, commit=00000000, modified=0, pid=82373, just started
-82373:C 11 Nov 2021 13:40:20.383 # Configuration loaded
-82373:M 11 Nov 2021 13:40:20.384 * Increased maximum number of open files to 10032 (it was originally set to 256).
-82373:M 11 Nov 2021 13:40:20.384 * monotonic clock: POSIX clock_gettime
-82373:M 11 Nov 2021 13:40:20.385 * Running mode=standalone, port=6379.
-82373:M 11 Nov 2021 13:40:20.385 # Server initialized
-82373:M 11 Nov 2021 13:40:20.385 * Loading RDB produced by version 6.2.6
-82373:M 11 Nov 2021 13:40:20.385 * RDB age 14 seconds
-82373:M 11 Nov 2021 13:40:20.385 * RDB memory usage when created 1.61 Mb
-82373:M 11 Nov 2021 13:40:20.386 # Done loading RDB, keys loaded: 11, keys expired: 0.
-82373:M 11 Nov 2021 13:40:20.386 * DB loaded from disk: 0.001 seconds
-82373:M 11 Nov 2021 13:40:20.386 * Ready to accept connections
-82373:M 11 Nov 2021 13:44:30.085 * 200 changes in 60 seconds. Saving...
-82373:M 11 Nov 2021 13:44:30.091 * Background saving started by pid 82532
-82532:C 11 Nov 2021 13:44:30.098 * DB saved on disk
-82373:M 11 Nov 2021 13:44:30.194 * Background saving terminated with success
-82373:M 11 Nov 2021 13:49:31.070 * 100 changes in 300 seconds. Saving...
-82373:M 11 Nov 2021 13:49:31.076 * Background saving started by pid 82561
-82561:C 11 Nov 2021 13:49:31.085 * DB saved on disk
-82373:M 11 Nov 2021 13:49:31.179 * Background saving terminated with success
-82373:M 11 Nov 2021 13:54:32.093 * 100 changes in 300 seconds. Saving...
-82373:M 11 Nov 2021 13:54:32.099 * Background saving started by pid 83206
-83206:C 11 Nov 2021 13:54:32.122 * DB saved on disk
-82373:M 11 Nov 2021 13:54:32.203 * Background saving terminated with success
-82373:M 11 Nov 2021 13:59:33.029 * 100 changes in 300 seconds. Saving...
-82373:M 11 Nov 2021 13:59:33.030 * Background saving started by pid 84352
-84352:C 11 Nov 2021 13:59:33.061 * DB saved on disk
-82373:M 11 Nov 2021 13:59:33.133 * Background saving terminated with success
-82373:signal-handler (1636668174) Received SIGTERM scheduling shutdown...
-82373:M 11 Nov 2021 14:02:54.926 # User requested shutdown...
-82373:M 11 Nov 2021 14:02:54.926 * Saving the final RDB snapshot before exiting.
-82373:M 11 Nov 2021 14:02:54.944 * DB saved on disk
-82373:M 11 Nov 2021 14:02:54.944 # Redis is now ready to exit, bye bye...
+92186:C 12 Nov 2021 14:18:44.184 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+92186:C 12 Nov 2021 14:18:44.184 # Redis version=6.2.6, bits=64, commit=00000000, modified=0, pid=92186, just started
+92186:C 12 Nov 2021 14:18:44.184 # Configuration loaded
+92186:M 12 Nov 2021 14:18:44.185 * Increased maximum number of open files to 10032 (it was originally set to 256).
+92186:M 12 Nov 2021 14:18:44.185 * monotonic clock: POSIX clock_gettime
+92186:M 12 Nov 2021 14:18:44.188 * Running mode=standalone, port=6379.
+92186:M 12 Nov 2021 14:18:44.188 # Server initialized
+92186:M 12 Nov 2021 14:18:44.188 * Ready to accept connections
+92186:M 12 Nov 2021 14:33:45.072 * 1 changes in 900 seconds. Saving...
+92186:M 12 Nov 2021 14:33:45.079 * Background saving started by pid 92299
+92299:C 12 Nov 2021 14:33:45.081 * DB saved on disk
+92186:M 12 Nov 2021 14:33:45.179 * Background saving terminated with success
+92186:M 12 Nov 2021 14:48:46.069 * 1 changes in 900 seconds. Saving...
+92186:M 12 Nov 2021 14:48:46.075 * Background saving started by pid 92335
+92335:C 12 Nov 2021 14:48:46.078 * DB saved on disk
+92186:M 12 Nov 2021 14:48:46.179 * Background saving terminated with success
+92186:M 12 Nov 2021 15:03:47.045 * 1 changes in 900 seconds. Saving...
+92186:M 12 Nov 2021 15:03:47.051 * Background saving started by pid 92534
+92534:C 12 Nov 2021 15:03:47.053 * DB saved on disk
+92186:M 12 Nov 2021 15:03:47.154 * Background saving terminated with success
+92186:M 12 Nov 2021 15:18:48.090 * 1 changes in 900 seconds. Saving...
+92186:M 12 Nov 2021 15:18:48.096 * Background saving started by pid 92725
+92725:C 12 Nov 2021 15:18:48.099 * DB saved on disk
+92186:M 12 Nov 2021 15:18:48.196 * Background saving terminated with success

@@ -20,6 +20,7 @@ ___
 2. Create environemnt from testing environment `conda env update -n bespoke --file bespoke-fit/devtools/conda-envs/test-env.yaml`. Install additonal packages: `conda install -c conda-forge mamba seaborn`.
 4. Execute `python setup.py develop` in `bespoke-fit/`
 5. Run `pip install git+git://github.com/openforcefield/bespoke-fit.git@931bb66bb3700208616e41bfde1a80d90a37d74f` to get desired environment.
+6. Openeye fragmenter issue workaround: git clone https://github.com/openforcefield/openff-fragmenter.git | cd and git checkout continue-if-elf-fails | execute `python setup.py develop`
 
 
 ## 📂 Directory

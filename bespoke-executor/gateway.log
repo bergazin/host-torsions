@@ -1,22 +1,81 @@
-[task id=b'coordinator:optimization:1'] transitioned from waiting -> running
-[task id=b'coordinator:optimization:1'] fragmentation transitioned from waiting -> running
-[task id=b'coordinator:optimization:1'] fragmentation transitioned from running -> success
-[task id=b'coordinator:optimization:1'] qc-generation transitioned from waiting -> running
-[task id=b'coordinator:optimization:1'] qc-generation transitioned from running -> success
-[task id=b'coordinator:optimization:1'] optimization transitioned from waiting -> running
-[task id=b'coordinator:optimization:1'] optimization transitioned from running -> success
-[task id=b'coordinator:optimization:1'] transitioned from running -> success
-[task id=b'coordinator:optimization:2'] transitioned from waiting -> running
-[task id=b'coordinator:optimization:2'] fragmentation transitioned from waiting -> running
-[task id=b'coordinator:optimization:2'] fragmentation transitioned from running -> success
-[task id=b'coordinator:optimization:2'] qc-generation transitioned from waiting -> running
-[task id=b'coordinator:optimization:3'] transitioned from waiting -> running
-[task id=b'coordinator:optimization:3'] fragmentation transitioned from waiting -> running
-[task id=b'coordinator:optimization:3'] fragmentation transitioned from running -> success
-[task id=b'coordinator:optimization:3'] qc-generation transitioned from waiting -> running
-[task id=b'coordinator:optimization:2'] qc-generation transitioned from running -> success
-[task id=b'coordinator:optimization:3'] qc-generation transitioned from running -> success
-[task id=b'coordinator:optimization:2'] optimization transitioned from waiting -> running
-[task id=b'coordinator:optimization:3'] optimization transitioned from waiting -> running
-[task id=b'coordinator:optimization:2'] optimization transitioned from running -> success
-[task id=b'coordinator:optimization:2'] transitioned from running -> success
+Exception raised by the main loop. This should never happen.
+Traceback (most recent call last):
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpx/_transports/default.py", line 62, in map_httpcore_exceptions
+    yield
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpx/_transports/default.py", line 276, in handle_async_request
+    ) = await self._pool.handle_async_request(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpcore/_async/connection_pool.py", line 234, in handle_async_request
+    response = await connection.handle_async_request(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpcore/_async/connection.py", line 136, in handle_async_request
+    self.socket = await self._open_socket(timeout)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpcore/_async/connection.py", line 163, in _open_socket
+    return await self._backend.open_tcp_stream(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpcore/_backends/auto.py", line 44, in open_tcp_stream
+    return await self.backend.open_tcp_stream(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpcore/_backends/anyio.py", line 154, in open_tcp_stream
+    stream = await TLSStream.wrap(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpcore/_exceptions.py", line 12, in map_exceptions
+    raise to_exc(exc) from None
+httpcore.ConnectError: All connection attempts failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/bespokefit/executor/services/coordinator/app.py", line 192, in _handle_task_result
+    task.result()
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/bespokefit/executor/services/coordinator/worker.py", line 71, in cycle
+    await _cycle()
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/bespokefit/executor/services/coordinator/worker.py", line 36, in _cycle
+    await task.running_stage.enter(task)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/bespokefit/executor/services/coordinator/stages.py", line 114, in enter
+    raw_response = await client.post(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpx/_client.py", line 1789, in post
+    return await self.request(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpx/_client.py", line 1483, in request
+    response = await self.send(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpx/_client.py", line 1571, in send
+    response = await self._send_handling_auth(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpx/_client.py", line 1599, in _send_handling_auth
+    response = await self._send_handling_redirects(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpx/_client.py", line 1636, in _send_handling_redirects
+    response = await self._send_single_request(request)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpx/_client.py", line 1673, in _send_single_request
+    response = await transport.handle_async_request(request)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpx/_transports/default.py", line 271, in handle_async_request
+    (
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/httpx/_transports/default.py", line 79, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: All connection attempts failed
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/fastapi/applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/starlette/middleware/cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/fastapi/routing.py", line 219, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/fastapi/routing.py", line 154, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/starlette/concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+asyncio.exceptions.CancelledError
