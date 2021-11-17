@@ -1,4 +1,0 @@
-[task id=b'coordinator:optimization:1'] transitioned from waiting -> running
-[task id=b'coordinator:optimization:1'] fragmentation transitioned from waiting -> running
-[task id=b'coordinator:optimization:1'] fragmentation transitioned from running -> errored
-[task id=b'coordinator:optimization:1'] transitioned from running -> errored

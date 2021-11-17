@@ -1,8 +1,0 @@
-[task id=b'coordinator:optimization:1'] transitioned from waiting -> running
-[task id=b'coordinator:optimization:1'] fragmentation transitioned from waiting -> running
-[task id=b'coordinator:optimization:1'] fragmentation transitioned from running -> success
-[task id=b'coordinator:optimization:1'] qc-generation transitioned from waiting -> running
-[task id=b'coordinator:optimization:1'] qc-generation transitioned from running -> success
-[task id=b'coordinator:optimization:1'] optimization transitioned from waiting -> running
-[task id=b'coordinator:optimization:1'] optimization transitioned from running -> success
-[task id=b'coordinator:optimization:1'] transitioned from running -> success

@@ -15,6 +15,8 @@ import seaborn as sns
 import pandas as pd
 from simtk import unit
 import shutil
+from distutils.dir_util import copy_tree
+
 import logging
 import argparse
 import sys
@@ -83,7 +85,7 @@ def main() -> int:
     # write to json
     workflow.export_factory(f"./{args.id}/{args.id}_workflow.json")
     # or yaml
-    workflow.export_factory(f"./{args.id}/{args.id}_workflow.yaml")
+    #workflow.export_factory(f"./{args.id}/{args.id}_workflow.yaml")
 
     target_molecule = Molecule.from_smiles(args.smiles)
     target_molecule.generate_conformers(n_conformers=1)
@@ -125,14 +127,14 @@ def main() -> int:
         print(stage.type, stage.status)
 
 
-    opt_id = f"bespoke-executor/{result.results.input_schema.id}/optimize.tmp/torsion-0/iter_0002/plot_torsion.pdf"
-    dst_path = f"./{args.id}/{args.id}_plot_torsion.pdf"
-    shutil.copy(opt_id, dst_path)
+    #opt_id = f"bespoke-executor/{result.results.input_schema.id}/optimize.tmp/torsion-0/iter_0002/plot_torsion.pdf"
+    #dst_path = f"./{args.id}/{args.id}_plot_torsion.pdf"
+    #shutil.copy(opt_id, dst_path)
 
-    #IFrame(
-    #    opt_id,
-    #    width=900,
-    #    height=600)
+    opt_id = f"bespoke-executor/{result.results.input_schema.id}"
+    dst_path = f"./{args.id}/{args.id}_{result.results.input_schema.id}"
+    #copy folder
+    copy_tree(opt_id, dst_path)
 
     #initial and new paramters
     #result.results.refit_parameter_values
@@ -163,8 +165,6 @@ def main() -> int:
     print(df)
     df.to_csv(f"{args.id}/{args.id}_parameter_changes.csv")
 
-
-    #%matplotlib inline
 
     logging.warning('Plotting parameters changes')
     plt.rc('font', size=16)

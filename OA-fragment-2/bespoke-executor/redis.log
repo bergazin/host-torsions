@@ -1,0 +1,77 @@
+75425:C 16 Nov 2021 17:53:33.051 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+75425:C 16 Nov 2021 17:53:33.051 # Redis version=6.2.6, bits=64, commit=00000000, modified=0, pid=75425, just started
+75425:C 16 Nov 2021 17:53:33.051 # Configuration loaded
+75425:M 16 Nov 2021 17:53:33.052 * Increased maximum number of open files to 10032 (it was originally set to 256).
+75425:M 16 Nov 2021 17:53:33.052 * monotonic clock: POSIX clock_gettime
+75425:M 16 Nov 2021 17:53:33.053 * Running mode=standalone, port=6379.
+75425:M 16 Nov 2021 17:53:33.053 # Server initialized
+75425:M 16 Nov 2021 17:53:33.053 * Ready to accept connections
+75425:M 16 Nov 2021 18:08:34.087 * 1 changes in 900 seconds. Saving...
+75425:M 16 Nov 2021 18:08:34.093 * Background saving started by pid 75649
+75649:C 16 Nov 2021 18:08:34.095 * DB saved on disk
+75425:M 16 Nov 2021 18:08:34.195 * Background saving terminated with success
+75425:M 16 Nov 2021 18:23:35.043 * 1 changes in 900 seconds. Saving...
+75425:M 16 Nov 2021 18:23:35.043 * Background saving started by pid 75744
+75744:C 16 Nov 2021 18:23:35.050 * DB saved on disk
+75425:M 16 Nov 2021 18:23:35.147 * Background saving terminated with success
+75425:M 16 Nov 2021 18:38:36.083 * 1 changes in 900 seconds. Saving...
+75425:M 16 Nov 2021 18:38:36.089 * Background saving started by pid 75856
+75856:C 16 Nov 2021 18:38:36.090 * DB saved on disk
+75425:M 16 Nov 2021 18:38:36.191 * Background saving terminated with success
+75425:M 16 Nov 2021 18:53:37.104 * 1 changes in 900 seconds. Saving...
+75425:M 16 Nov 2021 18:53:37.110 * Background saving started by pid 75949
+75949:C 16 Nov 2021 18:53:37.112 * DB saved on disk
+75425:M 16 Nov 2021 18:53:37.214 * Background saving terminated with success
+75425:M 16 Nov 2021 19:08:38.030 * 1 changes in 900 seconds. Saving...
+75425:M 16 Nov 2021 19:08:38.031 * Background saving started by pid 76115
+76115:C 16 Nov 2021 19:08:38.035 * DB saved on disk
+75425:M 16 Nov 2021 19:08:38.132 * Background saving terminated with success
+75425:M 16 Nov 2021 19:23:39.034 * 1 changes in 900 seconds. Saving...
+75425:M 16 Nov 2021 19:23:39.034 * Background saving started by pid 76210
+76210:C 16 Nov 2021 19:23:39.038 * DB saved on disk
+75425:M 16 Nov 2021 19:23:39.135 * Background saving terminated with success
+75425:M 16 Nov 2021 19:38:40.025 * 1 changes in 900 seconds. Saving...
+75425:M 16 Nov 2021 19:38:40.028 * Background saving started by pid 76329
+76329:C 16 Nov 2021 19:38:40.032 * DB saved on disk
+75425:M 16 Nov 2021 19:38:40.130 * Background saving terminated with success
+75425:M 16 Nov 2021 19:46:50.355 * 100 changes in 300 seconds. Saving...
+75425:M 16 Nov 2021 19:46:50.358 * Background saving started by pid 76393
+76393:C 16 Nov 2021 19:46:50.361 * DB saved on disk
+75425:M 16 Nov 2021 19:46:50.462 * Background saving terminated with success
+75425:M 16 Nov 2021 19:54:30.800 * 100 changes in 300 seconds. Saving...
+75425:M 16 Nov 2021 19:54:30.802 * Background saving started by pid 76454
+76454:C 16 Nov 2021 19:54:30.806 * DB saved on disk
+75425:M 16 Nov 2021 19:54:30.907 * Background saving terminated with success
+75425:M 16 Nov 2021 19:59:31.067 * 100 changes in 300 seconds. Saving...
+75425:M 16 Nov 2021 19:59:31.069 * Background saving started by pid 76539
+76539:C 16 Nov 2021 19:59:31.077 * DB saved on disk
+75425:M 16 Nov 2021 19:59:31.169 * Background saving terminated with success
+75425:M 16 Nov 2021 20:07:38.396 * 100 changes in 300 seconds. Saving...
+75425:M 16 Nov 2021 20:07:38.402 * Background saving started by pid 76598
+76598:C 16 Nov 2021 20:07:38.406 * DB saved on disk
+75425:M 16 Nov 2021 20:07:38.504 * Background saving terminated with success
+75425:M 16 Nov 2021 20:15:23.394 * 100 changes in 300 seconds. Saving...
+75425:M 16 Nov 2021 20:15:23.401 * Background saving started by pid 76642
+76642:C 16 Nov 2021 20:15:23.405 * DB saved on disk
+75425:M 16 Nov 2021 20:15:23.506 * Background saving terminated with success
+75425:M 16 Nov 2021 20:24:47.110 * 100 changes in 300 seconds. Saving...
+75425:M 16 Nov 2021 20:24:47.116 * Background saving started by pid 76735
+76735:C 16 Nov 2021 20:24:47.122 * DB saved on disk
+75425:M 16 Nov 2021 20:24:47.220 * Background saving terminated with success
+75425:M 16 Nov 2021 20:32:09.209 * 100 changes in 300 seconds. Saving...
+75425:M 16 Nov 2021 20:32:09.210 * Background saving started by pid 76782
+76782:C 16 Nov 2021 20:32:09.217 * DB saved on disk
+75425:M 16 Nov 2021 20:32:09.312 * Background saving terminated with success
+75425:M 16 Nov 2021 20:41:21.016 * 100 changes in 300 seconds. Saving...
+75425:M 16 Nov 2021 20:41:21.022 * Background saving started by pid 76877
+76877:C 16 Nov 2021 20:41:21.030 * DB saved on disk
+75425:M 16 Nov 2021 20:41:21.128 * Background saving terminated with success
+75425:M 16 Nov 2021 20:50:11.693 * 100 changes in 300 seconds. Saving...
+75425:M 16 Nov 2021 20:50:11.693 * Background saving started by pid 76961
+76961:C 16 Nov 2021 20:50:11.702 * DB saved on disk
+75425:M 16 Nov 2021 20:50:11.796 * Background saving terminated with success
+75425:signal-handler (1637124636) Received SIGTERM scheduling shutdown...
+75425:M 16 Nov 2021 20:50:36.910 # User requested shutdown...
+75425:M 16 Nov 2021 20:50:36.910 * Saving the final RDB snapshot before exiting.
+75425:M 16 Nov 2021 20:50:36.928 * DB saved on disk
+75425:M 16 Nov 2021 20:50:36.928 # Redis is now ready to exit, bye bye...

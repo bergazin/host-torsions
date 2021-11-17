@@ -15,6 +15,8 @@ import seaborn as sns
 import pandas as pd
 from simtk import unit
 import shutil
+from distutils.dir_util import copy_tree
+
 import logging
 import argparse
 import sys
@@ -83,7 +85,7 @@ def main() -> int:
     # write to json
     workflow.export_factory(f"./{args.id}/{args.id}_workflow.json")
     # or yaml
-    workflow.export_factory(f"./{args.id}/{args.id}_workflow.yaml")
+    #workflow.export_factory(f"./{args.id}/{args.id}_workflow.yaml")
 
     target_molecule = Molecule.from_smiles(args.smiles)
     target_molecule.generate_conformers(n_conformers=1)
@@ -105,9 +107,7 @@ def main() -> int:
         rd_mols.append(rd_mol)
         atoms.append(flat_matches)
 
-    logging.warning('Highlighting torsions')
-    img = Draw.MolsToGridImage(rd_mols, highlightAtomLists=atoms)
-    img.save(f"./{args.id}/{args.id}.png")#,bbox_inches=’tight’)
+
 
     # set keep files to true so we can view the results
     os.environ["BEFLOW_KEEP_FILES"] = "True"
@@ -121,20 +121,36 @@ def main() -> int:
         # grab the task id and wait for the task to finish
         task = executor.submit(input_schema=schema)
         result = wait_until_complete(optimization_id=task.id)
+        #print("bespoke-executor/{result")
+        #os.listdir(f"bespoke-executor/{result}")
+        #print("bespoke-executor/{result.results")
+        #os.listdir(f"bespoke-executor/{result.results}")
+        print("bespoke-executor/{result.results.input_schema.id}")
+        os.listdir(f"bespoke-executor/{result.results.input_schema.id}")
+        print("optimize.tmp dir...")
+        os.listdir(f"bespoke-executor/{result.results.input_schema.id}/optimize.tmp")
 
     print("Stages:")
     for stage in result.stages:
         print(stage.type, stage.status)
 
 
-    opt_id = f"bespoke-executor/{result.results.input_schema.id}/optimize.tmp/torsion-0/iter_0002/plot_torsion.pdf"
-    dst_path = f"./{args.id}/{args.id}_plot_torsion.pdf"
-    shutil.copy(opt_id, dst_path)
+    #opt_id = f"bespoke-executor/{result.results.input_schema.id}/optimize.tmp/torsion-0/iter_0002/plot_torsion.pdf"
+    #dst_path = f"./{args.id}/{args.id}_plot_torsion.pdf"
+    #shutil.copy(opt_id, dst_path)
 
-    #IFrame(
-    #    opt_id,
-    #    width=900,
-    #    height=600)
+    opt_id = f"bespoke-executor/{result.results.input_schema.id}"
+    dst_path = f"./{args.id}/output"
+    #print("bespoke-executor/{result")
+    #os.listdir(f"bespoke-executor/{result}")
+    #print("bespoke-executor/{result.results")
+    #os.listdir(f"bespoke-executor/{result.results}")
+    print("result dir...")
+    os.listdir(f"bespoke-executor/{result.results.input_schema.id}")
+    print("optimize.tmp dir...")
+    os.listdir(f"bespoke-executor/{result.results.input_schema.id}/optimize.tmp")
+    #copy folder
+    copy_tree(opt_id, dst_path)
 
     #initial and new paramters
     #result.results.refit_parameter_values
@@ -211,6 +227,9 @@ def main() -> int:
     logging.warning(f'Bespoke run for {args.id} is done')
     logging.warning(f'Check the "{args.id}" folder for output files')
 
+    logging.warning('Highlighting torsions')
+    img = Draw.MolsToGridImage(rd_mols, highlightAtomLists=atoms)
+    img.save(f"./{args.id}/{args.id}.png")#,bbox_inches=’tight’)
     return 0
 
 if __name__ == "__main__":
