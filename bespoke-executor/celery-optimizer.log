@@ -6,3 +6,7 @@
 [2021-11-16 14:41:31,589: INFO/Process-1] mingle: searching for neighbors
 [2021-11-16 14:41:32,634: INFO/Process-1] mingle: all alone
 [2021-11-16 14:41:32,682: INFO/Process-1] celery@optimizer ready.
+[2021-11-17 10:24:33,417: INFO/Process-1] Connected to redis://localhost:6379/0
+[2021-11-17 10:24:33,432: INFO/Process-1] mingle: searching for neighbors
+[2021-11-17 10:24:34,451: INFO/Process-1] mingle: all alone
+[2021-11-17 10:24:34,470: INFO/Process-1] celery@optimizer ready.

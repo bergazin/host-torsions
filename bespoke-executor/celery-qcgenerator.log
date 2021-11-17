@@ -16,3 +16,12 @@
 [2021-11-16 16:14:15,488: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[c3906c78-011d-4e68-80d1-fc92c9f4372c] received
 [2021-11-16 16:32:44,403: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[1f9dbd0a-bc9d-4567-ba9a-dbfe1fc82bbe] received
 [2021-11-16 16:49:54,594: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[fd89efe0-71a0-4384-a369-519e716f7746] received
+[2021-11-17 10:24:33,419: INFO/Process-2] Connected to redis://localhost:6379/0
+[2021-11-17 10:24:33,429: INFO/Process-2] mingle: searching for neighbors
+[2021-11-17 10:24:34,451: INFO/Process-2] mingle: all alone
+[2021-11-17 10:24:34,475: INFO/Process-2] celery@qcgenerator ready.
+[2021-11-17 10:29:04,967: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[6131f64f-ae14-4d1b-aed1-3137a38de82d] received
+[2021-11-17 10:29:05,003: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[aa47e5fc-5d48-4b0f-9c9b-d63b03a44c86] received
+[2021-11-17 10:29:05,042: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[805a243f-9897-44d6-a01c-58817be6bf80] received
+[2021-11-17 10:29:05,066: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[e67ed866-eac9-4c79-9a61-93a74d0b7aee] received
+[2021-11-17 10:29:06,911: WARNING/ForkPoolWorker-1] Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
