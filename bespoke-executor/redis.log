@@ -19,3 +19,7 @@
 79849:M 17 Nov 2021 10:41:20.204 * Background saving started by pid 80301
 80301:C 17 Nov 2021 10:41:20.222 * DB saved on disk
 79849:M 17 Nov 2021 10:41:20.304 * Background saving terminated with success
+79849:M 17 Nov 2021 10:51:09.090 * 100 changes in 300 seconds. Saving...
+79849:M 17 Nov 2021 10:51:09.091 * Background saving started by pid 80444
+80444:C 17 Nov 2021 10:51:09.111 * DB saved on disk
+79849:M 17 Nov 2021 10:51:09.195 * Background saving terminated with success
