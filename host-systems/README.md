@@ -1,5 +1,8 @@
 # What's here
 
+#### View of the whole OA host
+<img src="./images/OA-whole-host.png" width=50% height=50%>
+
 #### View of the OA fragments
 | Fragment 1 | Fragment 2 | Fragment 3 | Fragment 4 |
 | :-----------: | :------------: | :------------: | :------------: |
