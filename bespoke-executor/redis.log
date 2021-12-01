@@ -1,25 +1,17 @@
-79849:C 17 Nov 2021 10:24:27.134 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-79849:C 17 Nov 2021 10:24:27.135 # Redis version=6.2.6, bits=64, commit=00000000, modified=0, pid=79849, just started
-79849:C 17 Nov 2021 10:24:27.135 # Configuration loaded
-79849:M 17 Nov 2021 10:24:27.136 * Increased maximum number of open files to 10032 (it was originally set to 256).
-79849:M 17 Nov 2021 10:24:27.136 * monotonic clock: POSIX clock_gettime
-79849:M 17 Nov 2021 10:24:27.138 * Running mode=standalone, port=6379.
-79849:M 17 Nov 2021 10:24:27.138 # Server initialized
-79849:M 17 Nov 2021 10:24:27.139 * Loading RDB produced by version 6.2.6
-79849:M 17 Nov 2021 10:24:27.139 * RDB age 61056 seconds
-79849:M 17 Nov 2021 10:24:27.139 * RDB memory usage when created 3.19 Mb
-79849:M 17 Nov 2021 10:24:27.143 # Done loading RDB, keys loaded: 20, keys expired: 0.
-79849:M 17 Nov 2021 10:24:27.143 * DB loaded from disk: 0.004 seconds
-79849:M 17 Nov 2021 10:24:27.143 * Ready to accept connections
-79849:M 17 Nov 2021 10:31:03.640 * 100 changes in 300 seconds. Saving...
-79849:M 17 Nov 2021 10:31:03.645 * Background saving started by pid 80202
-80202:C 17 Nov 2021 10:31:03.664 * DB saved on disk
-79849:M 17 Nov 2021 10:31:03.746 * Background saving terminated with success
-79849:M 17 Nov 2021 10:41:20.203 * 100 changes in 300 seconds. Saving...
-79849:M 17 Nov 2021 10:41:20.204 * Background saving started by pid 80301
-80301:C 17 Nov 2021 10:41:20.222 * DB saved on disk
-79849:M 17 Nov 2021 10:41:20.304 * Background saving terminated with success
-79849:M 17 Nov 2021 10:51:09.090 * 100 changes in 300 seconds. Saving...
-79849:M 17 Nov 2021 10:51:09.091 * Background saving started by pid 80444
-80444:C 17 Nov 2021 10:51:09.111 * DB saved on disk
-79849:M 17 Nov 2021 10:51:09.195 * Background saving terminated with success
+53709:C 01 Dec 2021 08:50:44.390 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+53709:C 01 Dec 2021 08:50:44.390 # Redis version=6.2.6, bits=64, commit=00000000, modified=0, pid=53709, just started
+53709:C 01 Dec 2021 08:50:44.390 # Configuration loaded
+53709:M 01 Dec 2021 08:50:44.391 * Increased maximum number of open files to 10032 (it was originally set to 4096).
+53709:M 01 Dec 2021 08:50:44.391 * monotonic clock: POSIX clock_gettime
+53709:M 01 Dec 2021 08:50:44.392 * Running mode=standalone, port=6379.
+53709:M 01 Dec 2021 08:50:44.392 # Server initialized
+53709:M 01 Dec 2021 08:50:44.392 * Ready to accept connections
+53709:M 01 Dec 2021 08:55:45.010 * 100 changes in 300 seconds. Saving...
+53709:M 01 Dec 2021 08:55:45.011 * Background saving started by pid 53847
+53847:C 01 Dec 2021 08:55:45.014 * DB saved on disk
+53709:M 01 Dec 2021 08:55:45.111 * Background saving terminated with success
+53709:signal-handler (1638377938) Received SIGTERM scheduling shutdown...
+53709:M 01 Dec 2021 08:58:58.660 # User requested shutdown...
+53709:M 01 Dec 2021 08:58:58.660 * Saving the final RDB snapshot before exiting.
+53709:M 01 Dec 2021 08:58:58.670 * DB saved on disk
+53709:M 01 Dec 2021 08:58:58.670 # Redis is now ready to exit, bye bye...

@@ -1,12 +1,64 @@
-[2021-11-16 12:56:45,081: INFO/Process-3] Connected to redis://localhost:6379/0
-[2021-11-16 12:56:45,103: INFO/Process-3] mingle: searching for neighbors
-[2021-11-16 12:56:46,135: INFO/Process-3] mingle: all alone
-[2021-11-16 12:56:46,158: INFO/Process-3] celery@optimizer ready.
-[2021-11-16 14:41:31,573: INFO/Process-1] Connected to redis://localhost:6379/0
-[2021-11-16 14:41:31,589: INFO/Process-1] mingle: searching for neighbors
-[2021-11-16 14:41:32,634: INFO/Process-1] mingle: all alone
-[2021-11-16 14:41:32,682: INFO/Process-1] celery@optimizer ready.
-[2021-11-17 10:24:33,417: INFO/Process-1] Connected to redis://localhost:6379/0
-[2021-11-17 10:24:33,432: INFO/Process-1] mingle: searching for neighbors
-[2021-11-17 10:24:34,451: INFO/Process-1] mingle: all alone
-[2021-11-17 10:24:34,470: INFO/Process-1] celery@optimizer ready.
+[2021-12-01 08:50:48,642: INFO/Process-3] Connected to redis://localhost:6379/0
+[2021-12-01 08:50:48,653: INFO/Process-3] mingle: searching for neighbors
+[2021-12-01 08:50:49,678: INFO/Process-3] mingle: all alone
+[2021-12-01 08:50:49,706: INFO/Process-3] celery@optimizer ready.
+[2021-12-01 08:57:05,451: INFO/Process-3] Task openff.bespokefit.executor.services.optimizer.worker.optimize[6aa9f075-88b4-4d05-9d6e-a94b5876e17f] received
+[2021-12-01 08:57:05,886: INFO/ForkPoolWorker-1] making new fb folders in 6aa9f075-88b4-4d05-9d6e-a94b5876e17f
+[2021-12-01 08:57:05,919: WARNING/ForkPoolWorker-1]   0%|          | 0/4 [00:00<?, ?it/s]
+[2021-12-01 08:57:05,919: WARNING/ForkPoolWorker-1]                                      
+[2021-12-01 08:57:05,920: WARNING/ForkPoolWorker-1] 
+[2021-12-01 08:57:05,920: WARNING/ForkPoolWorker-1] generating target directory for torsion-0
+[2021-12-01 08:57:05,920: WARNING/ForkPoolWorker-1] 
+
+[2021-12-01 08:57:05,921: WARNING/ForkPoolWorker-1]   0%|          | 0/4 [00:00<?, ?it/s]
+[2021-12-01 08:57:06,564: WARNING/ForkPoolWorker-1] Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+[2021-12-01 08:57:06,589: WARNING/ForkPoolWorker-1]  25%|##5       | 1/4 [00:00<00:02,  1.49it/s]
+[2021-12-01 08:57:06,590: WARNING/ForkPoolWorker-1]                                              
+[2021-12-01 08:57:06,590: WARNING/ForkPoolWorker-1] 
+[2021-12-01 08:57:06,591: WARNING/ForkPoolWorker-1] generating target directory for torsion-1
+[2021-12-01 08:57:06,591: WARNING/ForkPoolWorker-1] 
+
+[2021-12-01 08:57:06,591: WARNING/ForkPoolWorker-1]  25%|##5       | 1/4 [00:00<00:02,  1.49it/s]
+[2021-12-01 08:57:06,601: WARNING/ForkPoolWorker-1]                                              
+[2021-12-01 08:57:06,601: WARNING/ForkPoolWorker-1] 
+[2021-12-01 08:57:06,601: WARNING/ForkPoolWorker-1] generating target directory for torsion-2
+[2021-12-01 08:57:06,602: WARNING/ForkPoolWorker-1] 
+
+[2021-12-01 08:57:06,602: WARNING/ForkPoolWorker-1]  25%|##5       | 1/4 [00:00<00:02,  1.49it/s]
+[2021-12-01 08:57:06,610: WARNING/ForkPoolWorker-1]                                              
+[2021-12-01 08:57:06,611: WARNING/ForkPoolWorker-1] 
+[2021-12-01 08:57:06,611: WARNING/ForkPoolWorker-1] generating target directory for torsion-3
+[2021-12-01 08:57:06,612: WARNING/ForkPoolWorker-1] 
+
+[2021-12-01 08:57:06,613: WARNING/ForkPoolWorker-1]  25%|##5       | 1/4 [00:00<00:02,  1.49it/s]
+[2021-12-01 08:57:06,623: WARNING/ForkPoolWorker-1] 100%|##########| 4/4 [00:00<00:00,  5.68it/s]
+[2021-12-01 08:57:06,624: WARNING/ForkPoolWorker-1] 
+
+[2021-12-01 08:58:45,689: ERROR/ForkPoolWorker-1] Task openff.bespokefit.executor.services.optimizer.worker.optimize[6aa9f075-88b4-4d05-9d6e-a94b5876e17f] raised unexpected: OSError("Source result/optimize/force-field.offxml could not be read. If this is a file, ensure that the path is correct.\nIf the file is present, ensure it is in a known SMIRNOFF encoding.\nValid formats are: ['XML']\nParsing failed with the following error:\nnot well-formed (invalid token): line 1, column 6\n")
+Traceback (most recent call last):
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/celery/app/trace.py", line 450, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/celery/app/trace.py", line 731, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/bespokefit/executor/services/optimizer/worker.py", line 29, in optimize
+    result = optimizer.optimize(input_schema, keep_files=settings.BEFLOW_KEEP_FILES)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/bespokefit/optimizers/model.py", line 224, in optimize
+    results = cls._optimize(schema)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/bespokefit/optimizers/forcebalance/forcebalance.py", line 113, in _optimize
+    results = cls._collect_results("", schema=schema)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/bespokefit/optimizers/forcebalance/forcebalance.py", line 146, in _collect_results
+    force_field_editor = ForceFieldEditor(results_dictionary["forcefield"])
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/bespokefit/utilities/smirnoff.py", line 51, in __init__
+    self.force_field = ForceField(force_field_name, allow_cosmetic_attributes=True)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/toolkit/typing/engines/smirnoff/forcefield.py", line 353, in __init__
+    self.parse_sources(sources, allow_cosmetic_attributes=allow_cosmetic_attributes)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/toolkit/typing/engines/smirnoff/forcefield.py", line 897, in parse_sources
+    smirnoff_data = self.parse_smirnoff_from_source(source)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/openff/toolkit/typing/engines/smirnoff/forcefield.py", line 1134, in parse_smirnoff_from_source
+    raise IOError(msg)
+OSError: Source result/optimize/force-field.offxml could not be read. If this is a file, ensure that the path is correct.
+If the file is present, ensure it is in a known SMIRNOFF encoding.
+Valid formats are: ['XML']
+Parsing failed with the following error:
+not well-formed (invalid token): line 1, column 6
+

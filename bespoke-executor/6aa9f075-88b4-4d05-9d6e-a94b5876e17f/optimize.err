@@ -1,0 +1,24 @@
+Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+Warning: Unable to load toolkit 'AmberTools'. 
+Traceback (most recent call last):
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/bin/ForceBalance.py", line 45, in Run_ForceBalance
+    optimizer.Run()
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/forcebalance/optimizer.py", line 322, in Run
+    xk = self.OptTab[self.jobtype]()
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/forcebalance/optimizer.py", line 950, in NewtonRaphson
+    return self.MainOptimizer(b_BFGS=0)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/forcebalance/optimizer.py", line 496, in MainOptimizer
+    data        = self.Objective.Full(xk,Ord,verbose=True)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/forcebalance/objective.py", line 314, in Full
+    Objective = self.Target_Terms(vals, Order, verbose, customdir)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/forcebalance/objective.py", line 255, in Target_Terms
+    Ans = Funcs[Order](mvals, customdir=customdir)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/forcebalance/target.py", line 319, in get_H
+    Ans = self.meta_get(mvals,1,1,customdir=customdir)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/forcebalance/target.py", line 584, in meta_get
+    Answer = self.get(mvals, AGrad, AHess)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/forcebalance/torsion_profile.py", line 186, in get
+    dV[p,:], _ = f12d3p(fdwrap(compute, mvals, p), h = self.h, f0 = V)
+  File "/Users/daniellebergaziin/anaconda/envs/bespoke/lib/python3.9/site-packages/forcebalance/finite_difference.py", line 110, in f12d3p
+    fp = (f1-fm1)/(2*h)
+FloatingPointError: invalid value encountered in true_divide

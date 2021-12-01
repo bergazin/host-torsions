@@ -1,27 +1,11 @@
-[2021-11-16 12:56:45,040: INFO/Process-1] Connected to redis://localhost:6379/0
-[2021-11-16 12:56:45,070: INFO/Process-1] mingle: searching for neighbors
-[2021-11-16 12:56:46,119: INFO/Process-1] mingle: all alone
-[2021-11-16 12:56:46,148: INFO/Process-1] celery@qcgenerator ready.
-[2021-11-16 14:41:31,597: INFO/Process-2] Connected to redis://localhost:6379/0
-[2021-11-16 14:41:31,619: INFO/Process-2] mingle: searching for neighbors
-[2021-11-16 14:41:32,651: INFO/Process-2] mingle: all alone
-[2021-11-16 14:41:32,689: INFO/Process-2] celery@qcgenerator ready.
-[2021-11-16 15:59:36,147: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[b3023a45-9b2a-438f-891f-a85dc06a0d40] received
-[2021-11-16 15:59:36,162: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[9708ffeb-d645-401c-955c-3f28bc89f3a6] received
-[2021-11-16 15:59:36,182: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[1bfae177-724c-4352-917d-5c4a9a32a397] received
-[2021-11-16 15:59:36,208: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[2f80c929-fdee-439e-a961-53b61b26bf38] received
-[2021-11-16 15:59:38,120: WARNING/ForkPoolWorker-1] Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
-[2021-11-16 16:05:40,652: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[631a46be-5ec2-4693-8d60-703c4cb22761] received
-[2021-11-16 16:07:44,086: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[0859cdf9-1c54-4ca3-a6e1-f73145108e19] received
-[2021-11-16 16:14:15,488: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[c3906c78-011d-4e68-80d1-fc92c9f4372c] received
-[2021-11-16 16:32:44,403: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[1f9dbd0a-bc9d-4567-ba9a-dbfe1fc82bbe] received
-[2021-11-16 16:49:54,594: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[fd89efe0-71a0-4384-a369-519e716f7746] received
-[2021-11-17 10:24:33,419: INFO/Process-2] Connected to redis://localhost:6379/0
-[2021-11-17 10:24:33,429: INFO/Process-2] mingle: searching for neighbors
-[2021-11-17 10:24:34,451: INFO/Process-2] mingle: all alone
-[2021-11-17 10:24:34,475: INFO/Process-2] celery@qcgenerator ready.
-[2021-11-17 10:29:04,967: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[6131f64f-ae14-4d1b-aed1-3137a38de82d] received
-[2021-11-17 10:29:05,003: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[aa47e5fc-5d48-4b0f-9c9b-d63b03a44c86] received
-[2021-11-17 10:29:05,042: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[805a243f-9897-44d6-a01c-58817be6bf80] received
-[2021-11-17 10:29:05,066: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[e67ed866-eac9-4c79-9a61-93a74d0b7aee] received
-[2021-11-17 10:29:06,911: WARNING/ForkPoolWorker-1] Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+[2021-12-01 08:50:48,835: INFO/Process-2] Connected to redis://localhost:6379/0
+[2021-12-01 08:50:48,859: INFO/Process-2] mingle: searching for neighbors
+[2021-12-01 08:50:49,882: INFO/Process-2] mingle: all alone
+[2021-12-01 08:50:49,907: INFO/Process-2] celery@qcgenerator ready.
+[2021-12-01 08:51:04,521: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[755cfd70-1328-42ac-983e-2f85ea3fdead] received
+[2021-12-01 08:51:04,538: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[74d8476e-6282-41fa-924b-6566ccb2206b] received
+[2021-12-01 08:51:04,568: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[56363a9e-025d-46b9-9719-aca883ccb5ec] received
+[2021-12-01 08:51:04,588: INFO/Process-2] Task openff.bespokefit.executor.services.qcgenerator.worker.compute_torsion_drive[1417df25-f878-411a-8206-da4ebf180965] received
+[2021-12-01 08:51:06,709: WARNING/ForkPoolWorker-2] Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+[2021-12-01 08:51:06,709: WARNING/ForkPoolWorker-3] Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+[2021-12-01 08:51:06,709: WARNING/ForkPoolWorker-1] Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
